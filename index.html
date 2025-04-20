@@ -3,17 +3,735 @@
 <head>
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Start your development with Steller landing page.">
-    <meta name="author" content="Devcrud">
-    <title>Vũ Thành Tuyên</title>
+    <meta name="description" content="AI Research Engineer Portfolio - Vu Thanh Tuyen">
+    <meta name="author" content="Vu Thanh Tuyen (SuZeAI)">
+    <title>Vũ Thành Tuyên | AI Research</title>
     <!-- font icons -->
     <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
     <!-- Bootstrap + Steller main styles -->
 	<link rel="stylesheet" href="assets/css/steller.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        .img-holder img {
+        :root {
+            --primary-color: #2D31FA;
+            --secondary-color: #5D8BF4; 
+            --accent-color: #051367;
+            --text-color: #333;
+            --light-bg: #f9f9ff;
+            --dark-bg: #0A1128;
+            --tech-green: #00FFC6;
+        }
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: var(--text-color);
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4, h5, h6, .title, .navbar-brand, .subtitle {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 600;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, var(--dark-bg) 0%, #051047 100%);
+            position: relative;
+            padding-top: 8rem;
+            padding-bottom: 8rem;
+            overflow: hidden;
+        }
+        
+        .header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1000%26quot%3b)' fill='none'%3e%3crect width='1440' height='560' x='0' y='0' fill='rgba(10, 17, 40, 1)'%3e%3c/rect%3e%3cpath d='M1488 560L0 560 L0 373.73Q38.68 364.41%2c 48 403.09Q111.32 370.4%2c 144 433.72Q178.41 372.14%2c 240 406.55Q295.51 366.06%2c 336 421.57Q386.34 375.91%2c 432 426.25Q453.48 351.73%2c 528 373.21Q541.19 338.4%2c 576 351.59Q642.99 322.58%2c 672 389.56Q700.93 370.49%2c 720 399.42Q747.04 378.45%2c 768 405.49Q821.22 362.71%2c 864 415.94Q916.09 372.03%2c 960 424.13Q1005.08 373.2%2c 1056 418.28Q1094.58 360.86%2c 1152 399.45Q1209.42 360.87%2c 1248 418.3Q1259.59 381.89%2c 1296 393.48Q1317.74 367.23%2c 1344 388.97Q1373.88 370.85%2c 1392 400.73Q1446 358.73%2c 1488 412.73z' fill='rgba(24, 38, 89, 1)'%3e%3c/path%3e%3cpath d='M1512 560L0 560 L0 461.35Q29.26 394.61%2c 96 423.87Q110.32 390.19%2c 144 404.51Q171.12 383.63%2c 192 410.75Q235.97 406.72%2c 240 450.69Q256.6 419.29%2c 288 435.9Q350.66 402.56%2c 384 465.22Q393.67 426.89%2c 432 436.56Q513.44 422%2c 528 503.44Q543.37 422.81%2c 624 438.18Q652.75 418.93%2c 672 447.68Q723.83 403.51%2c 768 455.34Q815.69 407.03%2c 864 454.72Q922.1 416.81%2c 960 474.91Q1013.28 432.19%2c 1056 485.48Q1087.7 421.18%2c 1152 452.88Q1208.46 413.34%2c 1248 469.8Q1282.75 456.55%2c 1296 491.31Q1348.92 448.23%2c 1392 501.15Q1434.54 447.69%2c 1488 490.23Q1504.93 411.15%2c 1584 428.08Q1627.86 423.95%2c 1632 467.81Q1672.85 412.66%2c 1728 453.51Q1750.61 428.11%2c 1776 450.72z' fill='rgba(17, 27, 64, 1)'%3e%3c/path%3e%3cpath d='M1464 560L0 560 L0 484.26Q-0.42 435.84%2c 48 435.42Q103.68 395.1%2c 144 450.77Q189.33 448.1%2c 192 493.43Q236.71 442.14%2c 288 486.85Q322.73 425.57%2c 384 460.3Q437.05 417.36%2c 480 470.41Q532 426.41%2c 576 478.42Q612.55 467.97%2c 624 504.53Q638.25 470.78%2c 672 485.03Q724.58 441.61%2c 768 494.19Q786.4 464.59%2c 816 482.99Q892.98 463.97%2c 912 540.95Q929.3 462.25%2c 1008 479.55Q1023.05 446.6%2c 1056 461.65Q1122.4 432.05%2c 1152 498.44Q1181.19 431.63%2c 1248 460.82Q1297.51 462.33%2c 1296 511.84Q1313.26 433.1%2c 1392 450.36Q1435.7 446.06%2c 1440 489.77Q1441.49 443.25%2c 1488 444.74Q1501.06 409.8%2c 1536 422.86z' fill='rgba(10, 17, 40, 1)'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1000'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3cmask%3e%3c/defs%3e%3c/svg%3e");
+            background-size: cover;
+            opacity: 0.7;
+            z-index: 0;
+            animation: pulse 15s ease-in-out infinite alternate;
+        }
+        
+        /* Add animated tech elements to the header background */
+        .header::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 800 800'%3E%3Cg fill='none' stroke='%2300FFC6' stroke-width='1'%3E%3Cpath d='M769 229L1037 260.9M927 880L731 737 520 660 309 538 40 599 295 764 126.5 879.5 40 599-197 493 102 382-31 229 126.5 79.5-69-63'/%3E%3Cpath d='M-31 229L237 261 390 382 603 493 308.5 537.5 101.5 381.5M370 905L295 764'/%3E%3Cpath d='M520 660L578 842 731 737 840 599 603 493 520 660 295 764 309 538 390 382 539 269 769 229 577.5 41.5 370 105 295 -36 126.5 79.5 237 261 102 382 40 599 -69 737 127 880'/%3E%3Cpath d='M520-140L578.5 42.5 731-63M603 493L539 269 237 261 370 105M902 382L539 269M390 382L102 382'/%3E%3Cpath d='M-222 42L126.5 79.5 370 105 539 269 577.5 41.5 927 80 769 229 902 382 603 493 731 737M295-36L577.5 41.5M578 842L295 764M40-201L127 80M102 382L-261 269'/%3E%3C/g%3E%3Cg fill='%232D31FA'%3E%3Ccircle cx='769' cy='229' r='5'/%3E%3Ccircle cx='539' cy='269' r='5'/%3E%3Ccircle cx='603' cy='493' r='5'/%3E%3Ccircle cx='731' cy='737' r='5'/%3E%3Ccircle cx='520' cy='660' r='5'/%3E%3Ccircle cx='309' cy='538' r='5'/%3E%3Ccircle cx='295' cy='764' r='5'/%3E%3Ccircle cx='40' cy='599' r='5'/%3E%3Ccircle cx='102' cy='382' r='5'/%3E%3Ccircle cx='127' cy='80' r='5'/%3E%3Ccircle cx='370' cy='105' r='5'/%3E%3Ccircle cx='578' cy='42' r='5'/%3E%3Ccircle cx='237' cy='261' r='5'/%3E%3Ccircle cx='390' cy='382' r='5'/%3E%3C/g%3E%3C/svg%3E");
+            opacity: 0.15;
+            z-index: 0;
+            animation: float 60s linear infinite;
+        }
+        
+        /* Animated particles */
+        .particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 0;
+        }
+        
+        .particle {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background-color: var(--tech-green);
             border-radius: 50%;
-            transform: scaleX(-1);
+            opacity: 0.5;
+            animation: rise 15s linear infinite;
+        }
+        
+        @keyframes float {
+            0% {
+                background-position: 0% 0%;
+            }
+            100% {
+                background-position: 100% 100%;
+            }
+        }
+        
+        @keyframes rise {
+            0% {
+                transform: translateY(100%) translateX(0) scale(0);
+                opacity: 0;
+            }
+            50% {
+                opacity: 0.5;
+            }
+            100% {
+                transform: translateY(-100%) translateX(20px) scale(1);
+                opacity: 0;
+            }
+        }
+        
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 0.7;
+            }
+            50% {
+                opacity: 0.5;
+            }
+        }
+        
+        .header .container {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .infos {
+            color: white;
+            max-width: 850px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .navbar {
+            background-color: rgba(10, 17, 40, 0.95) !important;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+        }
+        
+        .navbar .nav-link {
+            color: white !important;
+            font-weight: 500;
+            position: relative;
+            padding: 0.5rem 1rem;
+        }
+        
+        .navbar .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 50%;
+            background-color: var(--tech-green);
+            transition: all 0.3s ease;
+        }
+        
+        .navbar .nav-link:hover::after {
+            width: 80%;
+            left: 10%;
+        }
+        
+        .btn-primary {
+            background-color: var(--primary-color) !important;
+            border-color: var(--primary-color) !important;
+            color: white !important;
+            box-shadow: 0 4px 10px rgba(45, 49, 250, 0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(45, 49, 250, 0.4);
+        }
+        
+        .btn-dark {
+            background-color: var(--dark-bg) !important;
+            border-color: var(--dark-bg) !important;
+            color: white !important;
+            box-shadow: 0 4px 10px rgba(10, 17, 40, 0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .btn-dark:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(10, 17, 40, 0.4);
+        }
+        
+        .socials {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 1.5rem !important;
+        }
+        
+        .social-item {
+            background-color: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            margin: 0 5px;
+            width: 40px;
+            height: 40px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+        
+        .social-item:hover {
+            background-color: var(--tech-green);
+            color: var(--dark-bg);
+            transform: translateY(-3px);
+        }
+        
+        .custom-card {
+            border-radius: 12px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            border: none !important;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .custom-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+            border-bottom: 3px solid var(--tech-green);
+        }
+        
+        .custom-card .card-body {
+            padding: 2rem;
+        }
+        
+        .custom-card i {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .progress {
+            height: 8px;
+            border-radius: 4px;
+            background-color: rgba(45, 49, 250, 0.1);
+        }
+        
+        .progress-bar {
+            background: linear-gradient(90deg, var(--primary-color) 0%, var(--tech-green) 100%);
+            border-radius: 4px;
+        }
+        
+        section {
+            padding: 7rem 0;
+        }
+        
+        @media (max-width: 768px) {
+            section {
+                padding: 4rem 0;
+            }
+            
+            .title {
+                font-size: 2rem;
+            }
+            
+            .widget {
+                padding: 1rem;
+            }
+        }
+        
+        .section-title {
+            position: relative;
+            margin-bottom: 3rem;
+            display: inline-block;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 50%;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary-color) 0%, var(--tech-green) 100%);
+        }
+        
+        .subtitle {
+            color: var(--primary-color);
+            font-weight: 500;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+        
+        .card {
+            border: none;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        .testmonial-card {
+            background: rgba(255,255,255,0.05);
+            backdrop-filter: blur(10px);
+            margin: 10px;
+            text-align: center;
+        }
+        
+        .testmonial-card .card-body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+        
+        .testmonial-card img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto;
+        }
+        
+        .carousel-indicators li {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: rgba(45, 49, 250, 0.3);
+        }
+        
+        .carousel-indicators li.active {
+            background-color: var(--primary-color);
+        }
+        
+        .img-wrapper {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+            height: 250px;
+            position: relative;
+        }
+        
+        .img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .img-wrapper:hover img {
+            transform: scale(1.05);
+        }
+        
+        .overlay {
+            background: linear-gradient(to top, rgba(5, 19, 103, 0.9), transparent);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: flex-end;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .img-wrapper:hover .overlay {
+            opacity: 1;
+        }
+        
+        .overlay-infos {
+            padding: 30px;
+            width: 100%;
+            color: white;
+        }
+        
+        .overlay-infos a {
+            color: white;
+            display: inline-flex;
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 50%;
+            align-items: center;
+            justify-content: center;
+            margin-right: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .overlay-infos a:hover {
+            background: var(--tech-green);
+            color: var(--dark-bg);
+            transform: translateY(-3px);
+        }
+        
+        .contact-info-item {
+            padding: 2rem;
+            border-radius: 12px;
+            background: white;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .contact-info-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        .contact-info-item i {
+            color: var(--primary-color);
+            font-size: 2rem;
+        }
+        
+        .footer-section {
+            background-color: var(--dark-bg);
+            color: white;
+        }
+        
+        .page-footer {
+            background-color: var(--dark-bg);
+            color: white;
+            padding: 2rem 0;
+        }
+        
+        .widget {
+            background: linear-gradient(90deg, rgba(45, 49, 250, 0.1) 0%, rgba(0, 255, 198, 0.1) 100%);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-top: 2rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        
+        .widget-item {
+            padding: 1rem;
+            text-align: center;
+            flex: 1;
+            min-width: 120px;
+        }
+        
+        .widget-item h2 {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--tech-green);
+        }
+        
+        @media (max-width: 576px) {
+            .widget-item h2 {
+                font-size: 2rem;
+            }
+            
+            .widget-item {
+                min-width: 100px;
+                padding: 0.5rem;
+            }
+            
+            section {
+                padding: 3rem 0;
+            }
+            
+            .img-wrapper {
+                height: 200px;
+            }
+            
+            .overlay-infos {
+                padding: 15px;
+            }
+            
+            .overlay-infos h5 {
+                font-size: 0.9rem;
+                margin-bottom: 5px;
+            }
+            
+            .overlay-infos p {
+                font-size: 0.8rem;
+                margin-bottom: 8px;
+            }
+            
+            .overlay-infos a {
+                width: 32px;
+                height: 32px;
+                font-size: 0.8rem;
+            }
+        }
+        
+        .title {
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+        
+        /* Tech vibe additions */
+        .tech-highlight {
+            color: var(--tech-green);
+        }
+        
+        .skill-item {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .skill-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 0;
+            background: linear-gradient(to bottom, var(--primary-color), var(--tech-green));
+            transition: height 0.3s ease;
+        }
+        
+        .skill-item:hover::before {
+            height: 100%;
+        }
+        
+        /* Blog card responsive styles */
+        .blog-card {
+            height: 100%;
+            transition: all 0.3s ease;
+        }
+        
+        .blog-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+        }
+        
+        .blog-card:hover img {
+            transform: scale(1.08);
+        }
+        
+        /* Custom style for the navbar toggler button to make it white */
+        .navbar-toggler {
+            border-color: rgba(255, 255, 255, 0.5) !important;
+        }
+        
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 0.9)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important;
+        }
+        
+        .navbar-brand img {
+            width: 100px; /* Thiết lập chiều rộng cố định thay vì chỉ dùng max-height */
+            height: auto; /* Chiều cao tự động giữ tỷ lệ */
+            transition: all 0.3s ease;
+            filter: drop-shadow(0px 0px 4px rgba(0, 255, 198, 0.5));
+            background: transparent !important;
+            animation: logo-glow 3s ease-in-out infinite alternate;
+            image-rendering: -webkit-optimize-contrast; /* Cải thiện độ sắc nét trên Chrome */
+            image-rendering: crisp-edges; /* Cải thiện độ sắc nét trên Firefox */
+            position: relative;
+        }
+        
+        @media (max-width: 576px) {
+            .navbar-brand img {
+                width: 80px;
+            }
+            
+            .title {
+                font-size: 1.8rem;
+            }
+            
+            .subtitle {
+                font-size: 0.9rem;
+            }
+            
+            section .container p {
+                font-size: 0.95rem;
+            }
+            
+            /* Adjust spacing on mobile */
+            .buttons .btn {
+                margin: 5px;
+                padding: 0.5rem 0.8rem;
+                font-size: 0.9rem;
+            }
+        }
+        
+        @keyframes logo-glow {
+            0% {
+                filter: drop-shadow(-5px 3px 15px rgba(255, 255, 255, 0.4))
+                       drop-shadow(0px 0px 8px rgba(255, 255, 255, 0.3));
+            }
+            50% {
+                filter: drop-shadow(-2px 2px 20px rgba(255, 255, 255, 0.8))
+                       drop-shadow(0px 0px 15px rgba(255, 255, 255, 0.7))
+                       drop-shadow(0px 0px 25px rgba(255, 255, 255, 0.5));
+            }
+            100% {
+                filter: drop-shadow(-5px 5px 15px rgba(255, 255, 255, 0.4))
+                       drop-shadow(0px 0px 8px rgba(255, 255, 255, 0.3));
+            }
+        }
+        
+        .navbar-brand {
+            padding: 0; /* Xóa padding mặc định */
+        }
+        
+        .navbar-brand:hover img {
+            transform: scale(1.05);
+        }
+
+        /* Portfolio section responsive improvements */
+        .portfolio-container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+        .portfolio-item {
+            margin-bottom: 30px;
+        }
+        
+        .portfolio-wrapper {
+            border-radius: 12px;
+            overflow: hidden;
+            position: relative;
+            height: 250px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .portfolio-wrapper:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+        
+        .portfolio-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .portfolio-wrapper:hover img {
+            transform: scale(1.05);
+        }
+        
+        .portfolio-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(10, 17, 40, 0.9), transparent);
+            padding: 20px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .portfolio-wrapper:hover .portfolio-overlay {
+            opacity: 1;
+        }
+        
+        .portfolio-overlay h4 {
+            color: white;
+            margin-bottom: 5px;
+            font-size: 1.2rem;
+        }
+        
+        .portfolio-overlay p {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+        
+        .portfolio-overlay a {
+            color: var(--tech-green);
+            font-weight: 500;
+        }
+        
+        @media (max-width: 768px) {
+            .portfolio-wrapper {
+                height: 220px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .portfolio-wrapper {
+                height: 200px;
+            }
+            
+            .portfolio-overlay {
+                padding: 15px;
+            }
+            
+            .portfolio-overlay h4 {
+                font-size: 1.1rem;
+                margin-bottom: 3px;
+            }
+            
+            .portfolio-overlay p {
+                font-size: 0.8rem;
+                margin-bottom: 8px;
+            }
+        }
+
+        /* Contact section responsive styling */
+        @media (max-width: 767px) {
+            #contact .card-body {
+                padding: 2rem !important;
+            }
+            
+            #contact .form-control {
+                font-size: 0.95rem;
+                padding: 10px 12px;
+            }
+            
+            .form-group {
+                margin-bottom: 1rem;
+            }
+        }
+        
+        /* Form input styling improvements */
+        .form-control {
+            border: 1px solid rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            box-shadow: none;
+        }
+        
+        .form-control:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(45, 49, 250, 0.15);
+        }
+        
+        .form-control::placeholder {
+            color: rgba(0,0,0,0.4);
+            font-size: 0.9rem;
         }
     </style>
 </head>
@@ -22,7 +740,7 @@
     <!-- Page navigation -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" data-spy="affix" data-offset-top="0">
         <div class="container">
-            <a class="navbar-brand" href="#"><img src="assets/imgs/logo.svg" alt=""></a>
+            <a class="navbar-brand" href="#"><img src="assets/imgs/logo_2_rmbg.png" alt=""></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -61,13 +779,35 @@
 
     <!-- Page Header -->
     <header class="header" id="home">
+        <!-- Add animated particles for tech effect -->
+        <div class="particles">
+            <div class="particle" style="left:5%; animation-delay: 0s;"></div>
+            <div class="particle" style="left:15%; animation-delay: 2s;"></div>
+            <div class="particle" style="left:25%; animation-delay: 4s;"></div>
+            <div class="particle" style="left:35%; animation-delay: 6s;"></div>
+            <div class="particle" style="left:45%; animation-delay: 8s;"></div>
+            <div class="particle" style="left:55%; animation-delay: 10s;"></div>
+            <div class="particle" style="left:65%; animation-delay: 12s;"></div>
+            <div class="particle" style="left:75%; animation-delay: 14s;"></div>
+            <div class="particle" style="left:85%; animation-delay: 16s;"></div>
+            <div class="particle" style="left:95%; animation-delay: 18s;"></div>
+            <div class="particle" style="left:10%; animation-delay: 1s;"></div>
+            <div class="particle" style="left:20%; animation-delay: 3s;"></div>
+            <div class="particle" style="left:30%; animation-delay: 5s;"></div>
+            <div class="particle" style="left:40%; animation-delay: 7s;"></div>
+            <div class="particle" style="left:50%; animation-delay: 9s;"></div>
+            <div class="particle" style="left:60%; animation-delay: 11s;"></div>
+            <div class="particle" style="left:70%; animation-delay: 13s;"></div>
+            <div class="particle" style="left:80%; animation-delay: 15s;"></div>
+            <div class="particle" style="left:90%; animation-delay: 17s;"></div>
+        </div>
+        
         <div class="container">
             <div class="infos">
-                <h6 class="subtitle">hello,I'm</h6>AI Research Eningeer
-
-
-                <h6 class="title">Vu Thanh Tuyen SuZeAI</h6>
-                <p>AI RESEARCH ENGINEER</p>
+                <h6 class="subtitle tech-highlight">hello, I'm</h6>
+                <h6 class="title">Vu Thanh Tuyen <span class="tech-highlight">SuZeAI</span></h6>
+                <p class="mb-3" style="letter-spacing: 2px;">AI RESEARCH ENGINEER</p>
+                <p class="mb-4">Specializing in AI research engineer with extended capabilities in <span class="tech-highlight">system design</span>, <span class="tech-highlight">full-stack development</span>, and <span class="tech-highlight">problem solving</span>.</p>
 
                 <div class="buttons pt-3">
                     <button class="btn btn-primary rounded" onclick="scrollToContact()">HIRE ME</button>
@@ -81,24 +821,21 @@
                     <a class="social-item" href="javascript:void(0)" onclick="navigateTo('https://x.com/suzeai')"><i class="ti-twitter"></i></a>
                 </div>
             </div>              
-            <div class="img-holder">
-                <img src="assets/imgs/tuyen-1.jpg" alt="">
-            </div>      
         </div>  
 
         <!-- Header-widget -->
         <div class="widget">
             <div class="widget-item">
-                <h2>0</h2>
-                <p>Happy Clients</p>
+                <h2>20+</h2>
+                <p>AI Projects</p>
             </div>
             <div class="widget-item">
-                <h2>0</h2>
-                <p>Project Completed</p>
+                <h2>N+</h2>
+                <p>Research Papers</p>
             </div>
             <div class="widget-item">
-                <h2>0</h2>
-                <p>Awards Won</p>
+                <h2>2+</h2>
+                <p>Years Experience</p>
             </div>
         </div>
     </header>
@@ -109,14 +846,37 @@
         <div class="container mt-5">
             <div class="row text-center text-md-left">
                 <div class="col-md-3">
-                    <img src="assets/imgs/tuyen-1.jpg" alt="" class="img-thumbnail mb-4">
+                    <img src="assets/imgs/tuyen.jpg" alt="" class="img-thumbnail mb-4" style="transform: scaleX(-1); border-radius: 10px; border: 3px solid var(--tech-green);">
                 </div>
                 <div class="pl-md-4 col-md-9">
-                    <h6 class="title">Vu Thanh Tuyen (SuZeAI)</h6>
+                    <h6 class="title">Vu Thanh Tuyen <span class="tech-highlight">(SuZeAI)</span></h6>
                     <p class="subtitle">AI Research Engineer</p>
-                    <p>I am a passionate and dedicated individual with a strong background in Information Technology and Artificial Intelligence. I thrive on continuous learning and welcome challenges that push me to grow. </p>
+                    <p>I am a passionate and dedicated AI researcher engineer with a strong background in Information Technology and Artificial Intelligence. I thrive on continuous learning and welcome challenges that push me to grow.</p>
+                    <p>My expertise spans beyond traditional AI research engineer into complementary domains:</p>
+                    
+                    <div class="row mt-4 mb-4">
+                        <div class="col-md-4 mb-3">
+                            <div style="border-left: 3px solid var(--primary-color); padding-left: 15px;">
+                                <h6 class="mb-2"><i class="ti-layers-alt mr-2 tech-highlight"></i> System Design</h6>
+                                <p class="small text-muted">Creating scalable architectures and optimizing system performance for AI applications</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <div style="border-left: 3px solid var(--primary-color); padding-left: 15px;">
+                                <h6 class="mb-2"><i class="ti-package mr-2 tech-highlight"></i> Full-Stack Development</h6>
+                                <p class="small text-muted">Building complete applications from backend infrastructure to intuitive user interfaces</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <div style="border-left: 3px solid var(--primary-color); padding-left: 15px;">
+                                <h6 class="mb-2"><i class="ti-thought mr-2 tech-highlight"></i> Problem Solving</h6>
+                                <p class="small text-muted">Analytical thinking and innovative approaches to tackle complex technical challenges</p>
+                            </div>
+                        </div>
+                    </div>
+                    
                     <p>My proactive approach and commitment go beyond the typical 9-to-5, as I am deeply invested in achieving goals and driving innovation. I look forward to making meaningful contributions and creating positive impacts in the tech community.</p>
-                    <button class="btn btn-primary rounded mt-3" onclick="window.open('assets/docs/CV.pdf', '_blank')">DOWNLOAD CV</button>                   
+                    <button class="btn btn-primary rounded mt-3" onclick="window.open('assets/docs/CV.pdf', '_blank')"><i class="ti-download mr-2"></i>DOWNLOAD CV</button>                   
                 </div>
             </div>
         </div>
@@ -125,78 +885,130 @@
     <!-- Service section -->
     <section id="service" class="section">
         <div class="container text-center">
-            <h6 class="subtitle">Service</h6>
-            <h6 class="section-title mb-4">What I Do</h6>
-            <p class="mb-5 pb-4">The real danger is not that computers will begin to think like humans, <br> but that humans will begin to think like computers.</p>
+            <h6 class="subtitle">EXPERTISE</h6>
+            <h6 class="section-title mb-4">AI Research Engineer Areas</h6>
+            <p class="mb-5 pb-4">Specializing in cutting-edge AI technologies with a focus on practical applications <br> that transform complex data into intelligent solutions.</p>
 
             <div class="row">
                 <div class="col-sm-6 col-md-3 mb-4">
-                    <div class="custom-card card border">
+                    <div class="custom-card card">
                         <div class="card-body">
                             <i class="icon ti-eye"></i>
-                            <h5>CV</h5>
+                            <h5>Computer Vision</h5>
+                            <p class="mt-3">Image recognition, object detection, and scene understanding algorithms for visual data analysis.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-6 col-md-3 mb-4">
-                    <div class="custom-card card border">
+                    <div class="custom-card card">
                         <div class="card-body">
                             <i class="icon ti-search"></i>
                             <h5>NLP</h5>
+                            <p class="mt-3">Text analysis, sentiment detection, and language understanding for automated interpretation.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-6 col-md-3 mb-4">
-                    <div class="custom-card card border">
+                    <div class="custom-card card">
                         <div class="card-body">
                             <i class="icon ti-settings"></i>
-                            <h5>RL</h5>
+                            <h5>Reinforcement Learning</h5>
+                            <p class="mt-3">Decision-making algorithms that learn optimal behaviors through environment interaction.</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-6 col-md-3 mb-4">
-                    <div class="custom-card card border">
+                    <div class="custom-card card">
                         <div class="card-body">
                             <i class="icon ti-crown"></i>
-                            <h5>LLM</h5>
+                            <h5>Large Language Models</h5>
+                            <p class="mt-3">Fine-tuning and optimizing modern LLMs for specialized applications and workflows.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- End of Sectoin -->
+    <!-- End of Service Section -->
 
     <!-- Skills section -->
-    <section class="section">
+    <section class="section" style="background-color: #f8f9ff;">
         <div class="container text-center">
-            <h6 class="subtitle">Skills</h6>
-            <h6 class="section-title mb-4">Why Choose me</h6>
-            <p class="mb-5 pb-4">The greatest losses are not those that happen suddenly, <br> but those that fade unnoticed.</p>
+            <h6 class="subtitle">TECHNICAL PROFICIENCY</h6>
+            <h6 class="section-title mb-4">AI Expertise Spectrum</h6>
+            <p class="mb-5 pb-4">Specialized in cutting-edge AI technologies with expertise in multiple domains</p>
 
             <div class="row text-left">
-                <div class="col-sm-6">
-                    <h6 class="mb-3">Computer Vision</h6>
-                    <div class="progress">
-                        <div class="progress-bar bg-primary" role="progressbar" style="width: 80%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span>89%</span></div>
+                <div class="col-sm-6 mb-4">
+                    <div class="skill-item p-4" style="background: white; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="ti-image mr-3" style="font-size: 1.5rem; color: var(--primary-color);"></i>
+                            <h6 class="mb-0">Computer Vision</h6>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 89%;" aria-valuenow="89" aria-valuemin="0" aria-valuemax="100"><span>89%</span></div>
+                        </div>
+                        <p class="mt-2 small text-muted">Expertise in object detection, segmentation, and recognition using CNN architectures and transformers</p>
                     </div>
                 </div>
-                <div class="col-sm-6">
-                    <h6 class="mb-3">Natural language processing</h6>
-                    <div class="progress">
-                        <div class="progress-bar bg-primary" role="progressbar" style="width: 90%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span>83%</span></div>
+                <div class="col-sm-6 mb-4">
+                    <div class="skill-item p-4" style="background: white; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="ti-comment-alt mr-3" style="font-size: 1.5rem; color: var(--primary-color);"></i>
+                            <h6 class="mb-0">Natural Language Processing</h6>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 83%;" aria-valuenow="83" aria-valuemin="0" aria-valuemax="100"><span>83%</span></div>
+                        </div>
+                        <p class="mt-2 small text-muted">Text classification, sentiment analysis, entity recognition, and language generation capabilities</p>
                     </div>
                 </div>
-                <div class="col-sm-6">
-                    <h6 class="mb-3">Reinforcement learning</h6>
-                    <div class="progress">
-                        <div class="progress-bar bg-primary" role="progressbar" style="width: 85%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span>95%</span></div>
+                <div class="col-sm-6 mb-4">
+                    <div class="skill-item p-4" style="background: white; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="ti-loop mr-3" style="font-size: 1.5rem; color: var(--primary-color);"></i>
+                            <h6 class="mb-0">Reinforcement Learning</h6>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"><span>95%</span></div>
+                        </div>
+                        <p class="mt-2 small text-muted">Implementing Q-learning, policy gradients, and deep RL algorithms for complex decision processes</p>
                     </div>
                 </div>
-                <div class="col-sm-6">
-                    <h6 class="mb-3">LLM</h6>
-                    <div class="progress">
-                        <div class="progress-bar bg-primary" role="progressbar" style="width: 95%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span>90%</span></div>
+                <div class="col-sm-6 mb-4">
+                    <div class="skill-item p-4" style="background: white; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="ti-medall mr-3" style="font-size: 1.5rem; color: var(--primary-color);"></i>
+                            <h6 class="mb-0">Large Language Models</h6>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"><span>90%</span></div>
+                        </div>
+                        <p class="mt-2 small text-muted">Fine-tuning and prompt engineering for state-of-the-art language models</p>
+                    </div>
+                </div>
+                <div class="col-sm-6 mb-4">
+                    <div class="skill-item p-4" style="background: white; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="ti-stats-up mr-3" style="font-size: 1.5rem; color: var(--primary-color);"></i>
+                            <h6 class="mb-0">Machine Learning</h6>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 92%;" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100"><span>92%</span></div>
+                        </div>
+                        <p class="mt-2 small text-muted">Supervised, unsupervised learning techniques for classification and regression problems</p>
+                    </div>
+                </div>
+                <div class="col-sm-6 mb-4">
+                    <div class="skill-item p-4" style="background: white; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+                        <div class="d-flex align-items-center mb-3">
+                            <i class="ti-server mr-3" style="font-size: 1.5rem; color: var(--primary-color);"></i>
+                            <h6 class="mb-0">MLOps & Deployment</h6>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"><span>85%</span></div>
+                        </div>
+                        <p class="mt-2 small text-muted">Model deployment, monitoring, and CI/CD pipelines for machine learning</p>
                     </div>
                 </div>
             </div>  
@@ -207,27 +1019,29 @@
     <!-- Portfolio section -->
     <section id="portfolio" class="section">
         <div class="container text-center">
-            <h6 class="subtitle">Portfolio</h6>
-            <h6 class="section-title mb-4">Check My Wonderful Works</h6>
-            <p class="mb-5 pb-4">Value is not in possession but in appreciation.</p>
+            <h6 class="subtitle">PROJECTS</h6>
+            <h6 class="section-title mb-4">AI Research Engineer Portfolio</h6>
+            <p class="mb-5 pb-4">Showcasing innovative AI solutions across various domains and challenges</p>
 
             <div class="row">
                 <div class="col-sm-4">
                     <div class="img-wrapper">
-                        <img src="assets/imgs/folio-1.jpg" alt="">
+                        <img src="assets/imgs/projects/Object Detection System.png" alt="Computer Vision Project">
                         <div class="overlay">
                             <div class="overlay-infos">
-                                <h5>Project Title</h5>
+                                <h5>Object Detection System</h5>
+                                <p>Real-time object recognition using YOLOv5</p>
                                 <a href="javascript:void(0)"><i class="ti-zoom-in"></i></a>
                                 <a href="javascript:void(0)"><i class="ti-link"></i></a>
                             </div>  
                         </div>
                     </div>
                     <div class="img-wrapper">
-                        <img src="assets/imgs/folio-2.jpg" alt="">
+                        <img src="assets/imgs/projects/Sentiment Analysis API.png" alt="NLP Project">
                         <div class="overlay">
                             <div class="overlay-infos">
-                                <h5>Project Title</h5>
+                                <h5>Sentiment Analysis API</h5>
+                                <p>Text analysis for customer feedback</p>
                                 <a href="javascript:void(0)"><i class="ti-zoom-in"></i></a>
                                 <a href="javascript:void(0)"><i class="ti-link"></i></a>
                             </div>                              
@@ -236,20 +1050,22 @@
                 </div>
                 <div class="col-sm-4">
                     <div class="img-wrapper">
-                        <img src="assets/imgs/folio-3.jpg" alt="">
+                        <img src="assets/imgs/projects/RL Game Agent.png" alt="Reinforcement Learning Project">
                         <div class="overlay">
                             <div class="overlay-infos">
-                                <h5>Project Title</h5>
+                                <h5>RL Game Agent</h5>
+                                <p>Self-learning agent for strategic gameplay</p>
                                 <a href="javascript:void(0)"><i class="ti-zoom-in"></i></a>
                                 <a href="javascript:void(0)"><i class="ti-link"></i></a>
                             </div>  
                         </div>
                     </div>
                     <div class="img-wrapper">
-                        <img src="assets/imgs/folio-4.jpg" alt="">
+                        <img src="assets/imgs/projects/Neural Style Transfer.avif" alt="Deep Learning Project">
                         <div class="overlay">
                             <div class="overlay-infos">
-                                <h5>Project Title</h5>
+                                <h5>Neural Style Transfer</h5>
+                                <p>Artistic rendering using GANs</p>
                                 <a href="javascript:void(0)"><i class="ti-zoom-in"></i></a>
                                 <a href="javascript:void(0)"><i class="ti-link"></i></a>
                             </div>                              
@@ -258,20 +1074,22 @@
                 </div>
                 <div class="col-sm-4">
                     <div class="img-wrapper">
-                        <img src="assets/imgs/folio-5.jpg" alt="">
+                        <img src="assets/imgs/projects/LLM Fine-tuning.png" alt="LLM Project">
                         <div class="overlay">
                             <div class="overlay-infos">
-                                <h5>Project Title</h5>
+                                <h5>LLM Fine-tuning</h5>
+                                <p>Domain-specific language model adaptation</p>
                                 <a href="javascript:void(0)"><i class="ti-zoom-in"></i></a>
                                 <a href="javascript:void(0)"><i class="ti-link"></i></a>
                             </div>  
                         </div>
                     </div>
                     <div class="img-wrapper">
-                        <img src="assets/imgs/folio-6.jpg" alt="">
+                        <img src="assets/imgs/projects/Predictive Analytics.webp" alt="Data Science Project">
                         <div class="overlay">
                             <div class="overlay-infos">
-                                <h5>Project Title</h5>
+                                <h5>Predictive Analytics</h5>
+                                <p>Time-series forecasting for business intelligence</p>
                                 <a href="javascript:void(0)"><i class="ti-zoom-in"></i></a>
                                 <a href="javascript:void(0)"><i class="ti-link"></i></a>
                             </div>                              
@@ -279,18 +1097,16 @@
                     </div>                  
                 </div>
             </div>
-
         </div>
     </section>
     <!-- End of portfolio section -->
 
-    <!-- Testmonial Section -->
-    <section id="testmonial" class="section">
+    <!-- Testimonials section -->
+    <section id="testimonial" class="section" style="background-color: var(--dark-bg); color: white; position: relative; overflow: hidden; padding: 5rem 0;">
         <div class="container text-center">
-            <h6 class="subtitle">Testmonial</h6>
-            <h6 class="section-title mb-4">What People Say About Me</h6>
-            <p class="mb-5 pb-4">What we want is a machine that can learn from experience.</p>
-
+            <h6 class="subtitle tech-highlight">TESTIMONIALS</h6>
+            <h6 class="section-title mb-4" style="color: white;">Expert Feedback</h6>
+            <p class="mb-5 pb-4">Trusted by professionals in the field of AI and machine learning research</p>
 
             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators">
@@ -300,187 +1116,288 @@
                 </ol>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <div class="card testmonial-card border">
-                            <div class="card-body">
-                                <img src="assets/imgs/avatar-1.jpg" alt="">
-                                <p>Vũ Thành Tuyên is a highly skilled AI Research Engineer who consistently delivers exceptional results.</p>
-                                <h1 class="title">John Doe</h1>
-                                <h1 class="subtitle">AI Specialist</h1>
+                        <div class="card testmonial-card border mx-auto" style="max-width: 100%; width: 90%; margin: 0 auto;">
+                            <div class="card-body px-3 py-4 px-md-4 py-md-5">
+                                <img src="assets/imgs/avatar-1.jpg" alt="" style="border: 3px solid var(--primary-color); width: 70px; height: 70px; margin-bottom: 1rem;">
+                                <p class="mt-3" style="font-size: 0.95rem; line-height: 1.7;">"Vũ Thành Tuyên's expertise in computer vision algorithms significantly enhanced our object detection system's accuracy by 37%. His contributions were instrumental in our latest research paper."</p>
+                                <h1 class="title" style="font-size: 1.3rem; margin-top: 1rem;">Dr. John Chen</h1>
+                                <h1 class="subtitle" style="font-size: 0.85rem; opacity: 0.8;">Research Director, AI Vision Labs</h1>
                             </div>
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <div class="card testmonial-card border">
-                            <div class="card-body">
-                                <img src="assets/imgs/avatar-2.jpg" alt="">
-                                <p>Working with Vũ Thành Tuyên has been a pleasure. His expertise in AI is unparalleled.</p>
-                                <h1 class="title">Jane Smith</h1>
-                                <h1 class="subtitle">Data Scientist</h1>
+                        <div class="card testmonial-card border mx-auto" style="max-width: 100%; width: 90%; margin: 0 auto;">
+                            <div class="card-body px-3 py-4 px-md-4 py-md-5">
+                                <img src="assets/imgs/avatar-2.jpg" alt="" style="border: 3px solid var(--primary-color); width: 70px; height: 70px; margin-bottom: 1rem;">
+                                <p class="mt-3" style="font-size: 0.95rem; line-height: 1.7;">"Working with Vũ Thành Tuyên on our NLP project was remarkable. His innovative approach to transformer architecture optimization reduced our computational costs while maintaining high accuracy."</p>
+                                <h1 class="title" style="font-size: 1.3rem; margin-top: 1rem;">Sarah Williams, PhD</h1>
+                                <h1 class="subtitle" style="font-size: 0.85rem; opacity: 0.8;">Lead Data Scientist, TextMind</h1>
                             </div>
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <div class="card testmonial-card border">
-                            <div class="card-body">
-                                <img src="assets/imgs/avatar-3.jpg" alt="">
-                                <p>Vũ Thành Tuyên's dedication and knowledge in AI research are truly impressive.</p>
-                                <h1 class="title">Michael Johnson</h1>
-                                <h1 class="subtitle">Machine Learning Engineer</h1>
+                        <div class="card testmonial-card border mx-auto" style="max-width: 100%; width: 90%; margin: 0 auto;">
+                            <div class="card-body px-3 py-4 px-md-4 py-md-5">
+                                <img src="assets/imgs/avatar-3.jpg" alt="" style="border: 3px solid var(--primary-color); width: 70px; height: 70px; margin-bottom: 1rem;">
+                                <p class="mt-3" style="font-size: 0.95rem; line-height: 1.7;">"Vũ Thành Tuyên's reinforcement learning expertise helped our team develop an adaptive recommendation system that increased user engagement by 24%. His technical insights and collaborative approach were invaluable."</p>
+                                <h1 class="title" style="font-size: 1.3rem; margin-top: 1rem;">Michael Johnson</h1>
+                                <h1 class="subtitle" style="font-size: 0.85rem; opacity: 0.8;">CTO, LearnAI Systems</h1>
                             </div>
                         </div>
                     </div>
                 </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev" style="width: 10%;">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next" style="width: 10%;">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
             </div>
         </div>
+        <!-- Background decoration for the testimonial section -->
+        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: url('data:image/svg+xml,%3csvg xmlns=\"http://www.w3.org/2000/svg\" version=\"1.1\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" xmlns:svgjs=\"http://svgjs.com/svgjs\" width=\"1440\" height=\"560\" preserveAspectRatio=\"none\" viewBox=\"0 0 1440 560\"%3e%3cg mask=\"url(%26quot%3b%23SvgjsMask1001%26quot%3b)\" fill=\"none\"%3e%3cpath d=\"M443.38%2c569.204C514.582%2c570.993%2c590.455%2c549.919%2c626.407%2c488.318C662.62%2c426.255%2c643.73%2c349.031%2c609.677%2c285.743C574.011%2c219.204%2c520.088%2c158.671%2c443.38%2c157.456C365.032%2c156.216%2c305.047%2c212.411%2c268.216%2c280.527C235.109%2c341.304%2c234.944%2c412.168%2c268.372%2c472.74C304.125%2c537.512%2c373.675%2c567.453%2c443.38%2c569.204\" fill=\"rgba(75%2c 86%2c 210%2c 0.05)\" class=\"triangle-float1\"%3e%3c/path%3e%3cpath d=\"M1015.97 137.36 a120.06 120.06 0 1 0 240.12 0 a120.06 120.06 0 1 0 -240.12 0z\" fill=\"rgba(108%2c 0%2c 255%2c 0.025)\" class=\"triangle-float3\"%3e%3c/path%3e%3cpath d=\"M366.82%2c219.482C422.756%2c216.98%2c466.251%2c177.62%2c492.661%2c128.299C517.505%2c82.037%2c518.31%2c26.934%2c494.085%2c-19.695C467.9%2c-70.395%2c425.513%2c-117.398%2c366.82%2c-120.12C304.602%2c-123.022%2c250.048%2c-85.387%2c218.892%2c-31.481C187.654%2c22.582%2c179.605%2c88.767%2c212.014%2c142.233C243.736%2c194.564%2c306.714%2c222.172%2c366.82%2c219.482\" fill=\"rgba(75%2c 86%2c 210%2c 0.05)\" class=\"triangle-float3\"%3e%3c/path%3e%3cpath d=\"M994.6%2c121.972C1025.036%2c121.734%2c1054.759%2c111.069%2c1070.603%2c85.279C1087.003%2c58.584%2c1085.36%2c24.831%2c1070.503%2c-2.907C1055.209%2c-31.45%2c1028.954%2c-52.785%2c994.6%2c-53.825C958.562%2c-54.913%2c926.732%2c-38.033%2c909.396%2c-6.776C892.529%2c23.632%2c895.342%2c61.406%2c913.312%2c91.122C930.774%2c120.032%2c963.343%2c122.216%2c994.6%2c121.972\" fill=\"rgba(108%2c 0%2c 255%2c 0.025)\" class=\"triangle-float3\"%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id=\"SvgjsMask1001\"%3e%3crect width=\"1440\" height=\"560\" fill=\"white\"%3e%3c/rect%3e%3cmask%3e%3c/defs%3e%3c/svg%3e'); background-size: cover; opacity: 0.5; z-index: 0;"></div>
     </section>
-    <!-- End of testmonial section -->
+    <!-- End of testimonial section -->
 
     <!-- Blog Section -->
-    <section id="blog" class="section">
+    <section id="blog" class="section" style="background-color: #f8f9ff; padding: 5rem 0;">
         <div class="container text-center">
-            <h6 class="subtitle">My Blogs</h6>
-            <h6 class="section-title mb-4">Latest News</h6>
-            <p class="mb-5 pb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. In alias dignissimos. <br> rerum commodi corrupti, temporibus non quam.</p>
+            <h6 class="subtitle">RESEARCH & INSIGHTS</h6>
+            <h6 class="section-title mb-4">AI Knowledge Sharing</h6>
+            <p class="mb-5 pb-4">Exploring emerging trends and sharing insights in the rapidly evolving field of artificial intelligence</p>
 
             <div class="row text-left">
-                <div class="col-md-4">
-                    <div class="card border mb-4">
-                        <img src="assets/imgs/blog-1.jpg" alt="" class="card-img-top w-100">
-                        <div class="card-body">
-                            <h5 class="card-title">AI Innovations in 2023</h5>
-                            <div class="post-details">
-                                <a href="javascript:void(0)">Posted By: Vu Thanh Tuyen</a>
-                                <a href="javascript:void(0)"><i class="ti-thumb-up"></i> 789</a>
-                                <a href="javascript:void(0)"><i class="ti-comment"></i> 456</a>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card border-0 mb-2 blog-card h-100">
+                        <div class="position-relative overflow-hidden" style="border-radius: 12px;">
+                            <img src="assets/imgs/blog-1.jpg" alt="" class="card-img-top w-100" style="transition: transform 0.5s ease; height: 200px; object-fit: cover;">
+                            <div class="badge position-absolute" style="top: 15px; right: 15px; background-color: var(--primary-color); color: white; padding: 5px 10px; border-radius: 20px; font-size: 12px;">Computer Vision</div>
+                        </div>
+                        <div class="card-body px-3 pt-4">
+                            <h5 class="card-title mb-3" style="font-size: calc(1rem + 0.3vw);">Advances in Transformer-Based Object Detection</h5>
+                            <div class="post-details d-flex align-items-center mb-3">
+                                <img src="assets/imgs/tuyen.jpg" alt="" style="width: 30px; height: 30px; border-radius: 50%; object-fit: cover; margin-right: 10px;">
+                                <span class="text-muted" style="font-size: 0.85rem;">Vu Thanh Tuyen | April 15, 2025</span>
                             </div>
-                            <p>Explore the latest advancements in AI technology and how they are transforming various industries.</p>
-                            <a href="javascript:void(0)">Read More..</a>
+                            <p style="color: var(--text-color); font-size: 0.95rem;">Exploring how transformer architectures are revolutionizing computer vision tasks with improved attention mechanisms and feature extraction capabilities.</p>
+                            <a href="javascript:void(0)" class="d-flex align-items-center" style="color: var(--primary-color); font-weight: 500; margin-top: 15px;">
+                                Read Article <i class="ti-arrow-right ml-1"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="card border mb-4">
-                        <img src="assets/imgs/blog-2.jpg" alt="" class="card-img-top w-100">
-                        <div class="card-body">
-                            <h5 class="card-title">DeepSeed: AI-Powered Innovations</h5>
-                            <div class="post-details">
-                                <a href="javascript:void(0)">Posted By: Vu Thanh Tuyen</a>
-                                <a href="javascript:void(0)"><i class="ti-thumb-up"></i> 456</a>
-                                <a href="javascript:void(0)"><i class="ti-comment"></i> 123</a>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card border-0 mb-2 blog-card h-100">
+                        <div class="position-relative overflow-hidden" style="border-radius: 12px;">
+                            <img src="assets/imgs/blog-2.jpg" alt="" class="card-img-top w-100" style="transition: transform 0.5s ease; height: 200px; object-fit: cover;">
+                            <div class="badge position-absolute" style="top: 15px; right: 15px; background-color: var(--accent-color); color: white; padding: 5px 10px; border-radius: 20px; font-size: 12px;">Natural Language Processing</div>
+                        </div>
+                        <div class="card-body px-3 pt-4">
+                            <h5 class="card-title mb-3" style="font-size: calc(1rem + 0.3vw);">Efficient Fine-tuning Strategies for LLMs</h5>
+                            <div class="post-details d-flex align-items-center mb-3">
+                                <img src="assets/imgs/tuyen.jpg" alt="" style="width: 30px; height: 30px; border-radius: 50%; object-fit: cover; margin-right: 10px;">
+                                <span class="text-muted" style="font-size: 0.85rem;">Vu Thanh Tuyen | March 28, 2025</span>
                             </div>
-                            <p>Discover how DeepSeed is revolutionizing AI by creating innovative solutions that are both functional and groundbreaking.</p>
-                            <a href="javascript:void(0)">Read More..</a>
+                            <p style="color: var(--text-color); font-size: 0.95rem;">Comparing the effectiveness of various parameter-efficient fine-tuning methods like LoRA, QLoRA, and adapter-based approaches for domain adaptation.</p>
+                            <a href="javascript:void(0)" class="d-flex align-items-center" style="color: var(--primary-color); font-weight: 500; margin-top: 15px;">
+                                Read Article <i class="ti-arrow-right ml-1"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="card border mb-4">
-                        <img src="assets/imgs/blog-3.jpg" alt="" class="card-img-top w-100">
-                        <div class="card-body">
-                            <h5 class="card-title">DeepSeek: AI Research and Applications</h5>
-                            <div class="post-details">
-                                <a href="javascript:void(0)">Posted By: Vu Thanh Tuyen</a>
-                                <a href="javascript:void(0)"><i class="ti-thumb-up"></i> 456</a>
-                                <a href="javascript:void(0)"><i class="ti-comment"></i> 123</a>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card border-0 mb-2 blog-card h-100">
+                        <div class="position-relative overflow-hidden" style="border-radius: 12px;">
+                            <img src="assets/imgs/blog-3.jpg" alt="" class="card-img-top w-100" style="transition: transform 0.5s ease; height: 200px; object-fit: cover;">
+                            <div class="badge position-absolute" style="top: 15px; right: 15px; background-color: var(--primary-color); color: white; padding: 5px 10px; border-radius: 20px; font-size: 12px;">Reinforcement Learning</div>
+                        </div>
+                        <div class="card-body px-3 pt-4">
+                            <h5 class="card-title mb-3" style="font-size: calc(1rem + 0.3vw);">Multi-agent Systems for Complex Problem Solving</h5>
+                            <div class="post-details d-flex align-items-center mb-3">
+                                <img src="assets/imgs/tuyen.jpg" alt="" style="width: 30px; height: 30px; border-radius: 50%; object-fit: cover; margin-right: 10px;">
+                                <span class="text-muted" style="font-size: 0.85rem;">Vu Thanh Tuyen | February 10, 2025</span>
                             </div>
-                            <p>Learn how DeepSeek is advancing AI research and its applications in various fields, creating intelligent and responsive solutions.</p>
-                            <a href="javascript:void(0)">Read More..</a>
+                            <p style="color: var (--text-color); font-size: 0.95rem;">Investigating collaborative reinforcement learning approaches where multiple agents work together to solve complex problems with distributed decision making.</p>
+                            <a href="javascript:void(0)" class="d-flex align-items-center" style="color: var(--primary-color); font-weight: 500; margin-top: 15px;">
+                                Read Article <i class="ti-arrow-right ml-1"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
+            
+            <div class="text-center mt-4">
+                <a href="javascript:void(0)" class="btn btn-primary rounded px-4">View All Articles</a>
+            </div>
         </div>
     </section>
+    <!-- End of Blog Section -->
 
     <!-- Hire me section -->
-    <section class="bg-gray p-0 section">
+    <section class="p-5 section" style="background: linear-gradient(135deg, rgba(45, 49, 250, 0.05) 0%, rgba(0, 255, 198, 0.05) 100%);">
         <div class="container">
-            <div class="card bg-primary">
-                <div class="card-body text-light">
+            <div class="card border-0 shadow-sm" style="border-radius: 12px; overflow: hidden; background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);">
+                <div class="card-body py-5 px-4">
                     <div class="row align-items-center">
-                        <div class="col-sm-9 text-center text-sm-left">
-                            <h5 class="mt-3">Hire Me For Your Project</h5>
-                            <p class="mb-3">Time does not destroy value; misuse does.</p>
+                        <div class="col-lg-8 text-center text-lg-left">
+                            <h4 class="text-white mb-3" style="font-weight: 600;">Ready to leverage AI for your next project?</h4>
+                            <p class="text-white mb-0 opacity-8" style="font-size: 1.05rem;">Let's collaborate on innovative AI solutions that deliver measurable results and transform your business.</p>
                         </div>
-                        <div class="col-sm-3 text-center text-sm-right">
-                            <button class="btn btn-light rounded" onclick="scrollToContact()">Hire Me!</button>
+                        <div class="col-lg-4 text-center text-lg-right mt-4 mt-lg-0">
+                            <button class="btn btn-light rounded px-4 py-2" onclick="scrollToContact()" style="font-weight: 500; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                                <i class="ti-comment-alt mr-2"></i>Let's Connect
+                            </button>
                         </div>
                     </div>
                 </div> 
             </div>
         </div>
     </section>      
-    <!-- End od Hire me section. -->
+    <!-- End of Hire me section. -->
 
     <!-- Contact Section -->
     <section id="contact" class="position-relative section">
-        <div class="container text-center">
-            <h6 class="subtitle">Contact</h6>
-            <h6 class="section-title mb-4">Get In Touch With Me</h6>
-            <p class="mb-5 pb-4">The benefit of something is lost not when it breaks, <br> but when it is forgotten</p>
-
-            <div class="contact text-left">
-                <div class="form">
-                    <h6 class="subtitle">Available 24/7</h6>
-                    <h6 class="section-title mb-4">Get In Touch</h6>
-                    <form>
-                        <div class="form-group">
-                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" required>
-                        </div>
-                        <div class="form-group">
-                            <textarea name="contact-message" id="" cols="30" rows="5" class="form-control" placeholder="Message"></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-block rounded w-lg">Send Message</button>
-                    </form>
-                </div>
-                <div class="contact-infos">
-                    <div class="item">
-                        <i class="ti-location-pin"></i>
-                        <div class="">
-                            <h5>Location</h5>
-                            <p> Tran Phu - Mo Lao - Ha Dong - Ha Noi</p>
-                        </div>                          
-                    </div>
-                    <div class="item">
-                        <i class="ti-mobile"></i>
-                        <div>
-                            <h5>Phone Number</h5>
-                            <p>0896023142</p>
-                        </div>                          
-                    </div>
-                    <div class="item">
-                        <i class="ti-email"></i>
-                        <div class="mb-0">
-                            <h5>Email Address</h5>
-                            <p>suzeai545@gmail.com</p>
-                        </div>
-                    </div>
-                </div>                  
+        <div class="container">
+            <div class="text-center mb-5">
+                <h6 class="subtitle">GET IN TOUCH</h6>
+                <h6 class="section-title mb-4">Contact Information</h6>
+                <p>Ready to collaborate on innovative AI solutions? Let's discuss your project needs.</p>
             </div>
-        </div>  
-        <div id="map">
-            <iframe src="https://snazzymaps.com/embed/61257"></iframe>
-        </div>      
+            
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="card border-0 shadow-sm" style="border-radius: 12px; overflow: hidden;"></div>
+                        <div class="row no-gutters">
+                            <div class="col-md-5" style="background-color: var(--dark-bg); color: white; padding: 3rem 2rem;">
+                                <h5 class="mb-4" style="color: var(--secondary-color); font-weight: 600;">Contact Details</h5>
+                                
+                                <div class="d-flex mb-4">
+                                    <div style="width: 40px; height: 40px; background: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 15px;">
+                                        <i class="ti-location-pin"></i>
+                                    </div>
+                                    <div>
+                                        <h6 style="font-size: 0.9rem; margin-bottom: 5px; color: var(--secondary-color)">Location</h6>
+                                        <p style="font-size: 0.9rem; opacity: 0.8;">Tran Phu - Mo Lao - Ha Dong - Ha Noi</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="d-flex mb-4">
+                                    <div style="width: 40px; height: 40px; background: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 15px;">
+                                        <i class="ti-mobile"></i>
+                                    </div>
+                                    <div>
+                                        <h6 style="font-size: 0.9rem; margin-bottom: 5px; color: var(--secondary-color)">Phone</h6>
+                                        <p style="font-size: 0.9rem; opacity: 0.8;">0896023142</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="d-flex mb-4">
+                                    <div style="width: 40px; height: 40px; background: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 15px;">
+                                        <i class="ti-email"></i>
+                                    </div>
+                                    <div>
+                                        <h6 style="font-size: 0.9rem; margin-bottom: 5px; color: var(--secondary-color)">Email</h6>
+                                        <p style="font-size: 0.9rem; opacity: 0.8;">suzeai545@gmail.com</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="mt-5">
+                                    <h6 style="font-size: 0.9rem; margin-bottom: 15px; color: var(--secondary-color)">Connect</h6>
+                                    <div class="d-flex">
+                                        <a href="javascript:void(0)" onclick="navigateTo('https://www.linkedin.com/in/suzeai/')" style="width: 35px; height: 35px; background: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 10px; color: white; transition: all 0.3s ease;">
+                                            <i class="ti-linkedin"></i>
+                                        </a>
+                                        <a href="javascript:void(0)" onclick="navigateTo('https://github.com/SuZeAI')" style="width: 35px; height: 35px; background: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-right: 10px; color: white; transition: all 0.3s ease;">
+                                            <i class="ti-github"></i>
+                                        </a>
+                                        <a href="javascript:void(0)" onclick="navigateTo('https://x.com/suzeai')" style="width: 35px; height: 35px; background: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; transition: all 0.3s ease;">
+                                            <i class="ti-twitter"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-7">
+                                <div class="card-body p-4 p-lg-5">
+                                    <h5 class="mb-4">Send a Message</h5>
+                                    <form>
+                                        <div class="form-group mb-3">
+                                            <input type="text" class="form-control" placeholder="Your Name" style="border-radius: 6px; padding: 12px 15px;">
+                                        </div>
+                                        <div class="form-group mb-3">
+                                            <input type="email" class="form-control" placeholder="Your Email" style="border-radius: 6px; padding: 12px 15px;">
+                                        </div>
+                                        <div class="form-group mb-3">
+                                            <input type="text" class="form-control" placeholder="Subject" style="border-radius: 6px; padding: 12px 15px;">
+                                        </div>
+                                        <div class="form-group mb-4">
+                                            <textarea class="form-control" rows="4" placeholder="Your Message" style="border-radius: 6px; padding: 12px 15px;"></textarea>
+                                        </div>
+                                        <button type="submit" class="btn btn-primary px-4 py-2">Send Message</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
     <!-- End of Contact Section -->
 
     <!-- Page Footer -->
     <footer class="page-footer">
         <div class="container">
-            <div class="row align-items-center">
-                <div class="col-sm-6">
-                    <p>Copyright <script>document.write(new Date().getFullYear())</script> &copy; <a href="http://www.devcrud.com" target="_blank">DevCRUD</a></p>
+            <div class="row py-4">
+                <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+                    <h6 style="font-weight: 600; margin-bottom: 20px; color: var(--secondary-color);">Vu Thanh Tuyen</h6>
+                    <p class="mb-4" style="opacity: 0.8; font-size: 0.95rem;">AI Research Engineer passionate about developing intelligent systems that solve real-world problems through computer vision, NLP, and reinforcement learning.</p>
+                    <p class="mb-0" style="font-size: 0.9rem; opacity: 0.7;">© 2025 SuZeAI. All rights reserved.</p>
                 </div>
-                <div class="col-sm-6">
-                    <div class="socials">
-                        <a class="social-item" href="javascript:void(0)" onclick="navigateTo('https://www.facebook.com/tuyen.vu.403019')"><i class="ti-facebook"></i></a>
-                        <a class="social-item" href="javascript:void(0)" onclick="navigateTo('https://www.linkedin.com/in/suzeai/')"><i class="ti-linkedin"></i></a>
-                        <a class="social-item" href="javascript:void(0)" onclick="navigateTo('https://github.com/SuZeAI')"><i class="ti-github"></i></a>
-                        <a class="social-item" href="javascript:void(0)" onclick="navigateTo('https://x.com/suzeai')"><i class="ti-twitter"></i></a>
-                    </div>
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                    <h6 style="font-weight: 600; margin-bottom: 20px; color: var(--secondary-color);">Quick Links</h6>
+                    <ul class="list-unstyled" style="opacity: 0.8;">
+                        <li class="mb-2"><a href="#home" style="color: white; text-decoration: none;">Home</a></li>
+                        <li class="mb-2"><a href="#about" style="color: white; text-decoration: none;">About</a></li>
+                        <li class="mb-2"><a href="#service" style="color: white; text-decoration: none;">Services</a></li>
+                        <li class="mb-2"><a href="#portfolio" style="color: white; text-decoration: none;">Portfolio</a></li>
+                        <li><a href="#contact" style="color: white; text-decoration: none;">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h6 style="font-weight: 600; margin-bottom: 20px; color: var(--secondary-color);">Research Interests</h6>
+                    <ul class="list-unstyled" style="opacity: 0.8;">
+                        <li class="mb-2">Computer Vision</li>
+                        <li class="mb-2">Natural Language Processing</li>
+                        <li class="mb-2">Reinforcement Learning</li>
+                        <li class="mb-2">Large Language Models</li>
+                        <li>Multimodal AI Systems</li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h6 style="font-weight: 600; margin-bottom: 20px; color: var(--secondary-color);">Contact</h6>
+                    <ul class="list-unstyled" style="opacity: 0.8;">
+                        <li class="mb-2" style="display: flex; align-items: center;">
+                            <i class="ti-email mr-2"></i> suzeai545@gmail.com
+                        </li>
+                        <li class="mb-2" style="display: flex; align-items: center;">
+                            <i class="ti-mobile mr-2"></i> 0896023142
+                        </li>
+                        <li style="display: flex; align-items: center;">
+                            <i class="ti-location-pin mr-2"></i> Ha Dong, Ha Noi
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-top border-dark pt-4" style="opacity: 0.3;">
+                <div class="row">
+                    <!-- <div class="col-md-6 text-center text-md-left">
+                        <p class="mb-0" style="font-size: 0.9rem; opacity: 0.7;">© <script>document.write(new Date().getFullYear())</script> SuZeAI. All rights reserved.</p>
+                    </div> -->
+                    <!-- <div class="col-md-6 text-center text-md-right">
+                        <p class="mb-0" style="font-size: 0.9rem; opacity: 0.7;">Designed by <a href="http://www.devcrud.com" target="_blank" style="color: var(--secondary-color);">DevCRUD</a></p>
+                    </div> -->
                 </div>
             </div>
         </div>
