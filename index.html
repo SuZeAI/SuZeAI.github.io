@@ -441,6 +441,8 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: space-around;
+            position: relative; /* Add position relative */
+            z-index: 10; /* Ensure widget stays on top */
         }
         
         .widget-item {
@@ -464,6 +466,28 @@
             .widget-item {
                 min-width: 100px;
                 padding: 0.5rem;
+            }
+            
+            /* Added better mobile spacing for widget */
+            .widget {
+                margin-top: 1rem;
+                padding: 1rem 0.5rem;
+                margin-bottom: 1.5rem; /* Add spacing below */
+            }
+            
+            /* Fix header height to ensure proper spacing */
+            .header {
+                min-height: 100vh;
+                padding-bottom: 4rem; /* Add padding at the bottom of header */
+                position: relative;
+                overflow: hidden; /* Prevent content overflow */
+            }
+            
+            /* Ensure relative positioning of container inside header */
+            .header .container {
+                position: relative;
+                z-index: 1;
+                padding-bottom: 2rem; /* Add padding for widget section */
             }
             
             section {
@@ -734,6 +758,75 @@
         .form-control::placeholder {
             color: rgba(0,0,0,0.4);
             font-size: 0.9rem;
+        }
+
+        /* Responsive styles for tablet/iPad devices */
+        @media (max-width: 991px) {
+            /* Hide the header widget on iPad and smaller screens */
+           
+            /* Adjust footer columns visibility for iPad */
+            .footer-columns-tablet-hide {
+                display: none;
+            }
+            
+            /* Make the remaining footer columns take more space */
+            .page-footer .col-md-6:first-child {
+                flex: 0 0 100%;
+                max-width: 100%;
+                margin-bottom: 2rem;
+            }
+            
+            /* Ensure proper spacing in footer */
+            .page-footer .py-4 {
+                padding-bottom: 0 !important;
+            }
+        }
+        
+        @media (max-width: 576px) {
+           
+            
+            /* Fix header height to ensure proper spacing */
+            .header {
+                min-height: 100vh;
+                padding-bottom: 4rem; /* Add padding at the bottom of header */
+                position: relative;
+                overflow: hidden; /* Prevent content overflow */
+            }
+            
+            /* Ensure relative positioning of container inside header */
+            .header .container {
+                position: relative;
+                z-index: 1;
+                padding-bottom: 2rem; /* Add padding for widget section */
+            }
+            
+            section {
+                padding: 3rem 0;
+            }
+            
+            .img-wrapper {
+                height: 200px;
+            }
+            
+            .overlay-infos {
+                padding: 15px;
+            }
+            
+            .overlay-infos h5 {
+                font-size: 0.9rem;
+                margin-bottom: 5px;
+            }
+            
+            .overlay-infos p {
+                font-size: 0.8rem;
+                margin-bottom: 8px;
+            }
+            
+            .overlay-infos a {
+                width: 32px;
+                height: 32px;
+                font-size: 0.8rem;
+            }
         }
     </style>
 </head>
@@ -1357,7 +1450,7 @@
                     <p class="mb-4" style="opacity: 0.8; font-size: 0.95rem;">AI Research Engineer passionate about developing intelligent systems that solve real-world problems through computer vision, NLP, and reinforcement learning.</p>
                     <p class="mb-0" style="font-size: 0.9rem; opacity: 0.7;">© 2025 SuZeAI. All rights reserved.</p>
                 </div>
-                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0">
+                <div class="col-lg-3 col-md-6 mb-4 mb-lg-0 footer-columns-tablet-hide">
                     <h6 style="font-weight: 600; margin-bottom: 20px; color: var(--secondary-color);">Quick Links</h6>
                     <ul class="list-unstyled" style="opacity: 0.8;">
                         <li class="mb-2"><a href="#home" style="color: white; text-decoration: none;">Home</a></li>
@@ -1367,7 +1460,7 @@
                         <li><a href="#contact" style="color: white; text-decoration: none;">Contact</a></li>
                     </ul>
                 </div>
-                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0 footer-columns-tablet-hide">
                     <h6 style="font-weight: 600; margin-bottom: 20px; color: var(--secondary-color);">Research Interests</h6>
                     <ul class="list-unstyled" style="opacity: 0.8;">
                         <li class="mb-2">Computer Vision</li>
@@ -1377,7 +1470,7 @@
                         <li>Multimodal AI Systems</li>
                     </ul>
                 </div>
-                <div class="col-lg-2 col-md-6">
+                <div class="col-lg-2 col-md-6  footer-columns-tablet-hide">
                     <h6 style="font-weight: 600; margin-bottom: 20px; color: var(--secondary-color);">Contact</h6>
                     <ul class="list-unstyled" style="opacity: 0.8;">
                         <li class="mb-2" style="display: flex; align-items: center;">
