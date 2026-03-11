@@ -441,8 +441,8 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: space-around;
-            position: relative; /* Add position relative */
-            z-index: 10; /* Ensure widget stays on top */
+            position: relative;
+            z-index: 10;
         }
         
         .widget-item {
@@ -458,70 +458,57 @@
             color: var(--tech-green);
         }
         
-        @media (max-width: 576px) {
-            .widget-item h2 {
-                font-size: 2rem;
+        @media (max-width: 767px) {
+            .widget {
+                margin-top: 1.5rem;
+                padding: 1rem;
+                margin-bottom: 0;
             }
             
             .widget-item {
+                flex: 1 1 33.333%;
                 min-width: 100px;
-                padding: 0.5rem;
+                padding: 0.7rem 0.3rem;
             }
             
-            /* Added better mobile spacing for widget */
-            .widget {
-                margin-top: 1rem;
-                padding: 1rem 0.5rem;
-                margin-bottom: 1.5rem; /* Add spacing below */
+            .widget-item h2 {
+                font-size: 1.5rem;
             }
             
-            /* Fix header height to ensure proper spacing */
-            .header {
-                min-height: 100vh;
-                padding-bottom: 4rem; /* Add padding at the bottom of header */
-                position: relative;
-                overflow: hidden; /* Prevent content overflow */
-            }
-            
-            /* Ensure relative positioning of container inside header */
-            .header .container {
-                position: relative;
-                z-index: 1;
-                padding-bottom: 2rem; /* Add padding for widget section */
-            }
-            
-            section {
-                padding: 3rem 0;
-            }
-            
-            .img-wrapper {
-                height: 200px;
-            }
-            
-            .overlay-infos {
-                padding: 15px;
-            }
-            
-            .overlay-infos h5 {
-                font-size: 0.9rem;
-                margin-bottom: 5px;
-            }
-            
-            .overlay-infos p {
-                font-size: 0.8rem;
-                margin-bottom: 8px;
-            }
-            
-            .overlay-infos a {
-                width: 32px;
-                height: 32px;
-                font-size: 0.8rem;
+            .widget-item p {
+                font-size: 0.75rem;
+                margin-bottom: 0;
             }
         }
         
         .title {
             font-size: 2.5rem;
             font-weight: 700;
+        }
+        
+        /* Mobile-specific adjustments */
+        @media (max-width: 576px) {
+            /* Reduce particles on mobile for performance */
+            .particles .particle:nth-child(n+11) {
+                display: none;
+            }
+            
+            /* Title adjustments */
+            .title {
+                font-size: 1.5rem !important;
+            }
+            
+            /* Prevent horizontal scroll */
+            body {
+                overflow-x: hidden;
+                max-width: 100vw;
+            }
+            
+            /* Make images responsive */
+            img {
+                max-width: 100%;
+                height: auto;
+            }
         }
         
         /* Tech vibe additions */
@@ -701,7 +688,26 @@
             font-weight: 500;
         }
         
-        @media (max-width: 768px) {
+        /* Touch-friendly improvements for mobile */
+        @media (max-width: 767px) {
+            /* Make buttons and links more touch-friendly */
+            .btn {
+                min-height: 44px;
+                padding: 0.7rem 1.5rem;
+            }
+            
+            .nav-link {
+                min-height: 44px;
+                display: flex;
+                align-items: center;
+            }
+            
+            /* Always show portfolio overlay on mobile */
+            .portfolio-overlay {
+                opacity: 1;
+                background: linear-gradient(to top, rgba(10, 17, 40, 0.95), rgba(10, 17, 40, 0.3));
+            }
+            
             .portfolio-wrapper {
                 height: 220px;
             }
@@ -783,29 +789,118 @@
         }
         
         @media (max-width: 576px) {
-           
-            
             /* Fix header height to ensure proper spacing */
             .header {
-                min-height: 100vh;
-                padding-bottom: 4rem; /* Add padding at the bottom of header */
+                min-height: auto;
+                padding-top: 5rem;
+                padding-bottom: 3rem;
                 position: relative;
-                overflow: hidden; /* Prevent content overflow */
+                overflow: hidden;
             }
             
             /* Ensure relative positioning of container inside header */
             .header .container {
                 position: relative;
                 z-index: 1;
-                padding-bottom: 2rem; /* Add padding for widget section */
+                padding-bottom: 1rem;
             }
             
+            /* Hero section adjustments */
+            .infos {
+                padding: 1rem;
+            }
+            
+            .infos .title {
+                font-size: 1.5rem !important;
+                line-height: 1.3;
+                margin-bottom: 0.5rem;
+            }
+            
+            .infos .subtitle {
+                font-size: 0.85rem;
+                letter-spacing: 1px;
+            }
+            
+            .infos p {
+                font-size: 0.9rem;
+                line-height: 1.6;
+            }
+            
+            /* Button adjustments */
+            .buttons {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .buttons .btn {
+                width: 100%;
+                margin: 0 !important;
+                padding: 0.7rem 1rem;
+                font-size: 0.85rem;
+            }
+            
+            /* Social icons */
+            .socials {
+                margin-top: 1.5rem !important;
+            }
+            
+            .social-item {
+                width: 35px;
+                height: 35px;
+                margin: 0 4px;
+                font-size: 0.85rem;
+            }
+            
+            /* Section spacing */
             section {
                 padding: 3rem 0;
             }
             
+            /* About section mobile */
+            #about .img-thumbnail {
+                max-width: 200px;
+                margin: 0 auto 1.5rem;
+                display: block;
+            }
+            
+            #about .col-md-9 {
+                padding-left: 15px !important;
+            }
+            
+            #about .col-md-4 {
+                margin-bottom: 1.5rem;
+            }
+            
+            #about .small {
+                font-size: 0.85rem;
+            }
+            
+            /* Service cards mobile */
+            .custom-card {
+                margin-bottom: 1.5rem;
+            }
+            
+            .custom-card .card-body {
+                padding: 1.5rem;
+            }
+            
+            .custom-card i {
+                font-size: 2rem;
+            }
+            
+            .custom-card h5 {
+                font-size: 1.1rem;
+            }
+            
+            .custom-card p {
+                font-size: 0.9rem;
+            }
+            
+            /* Portfolio/Image wrapper */
             .img-wrapper {
                 height: 200px;
+                margin-bottom: 20px;
             }
             
             .overlay-infos {
@@ -826,6 +921,157 @@
                 width: 32px;
                 height: 32px;
                 font-size: 0.8rem;
+            }
+            
+            /* Skills section mobile */
+            .progress {
+                height: 6px;
+                margin-bottom: 1rem;
+            }
+            
+            /* Testimonial cards mobile */
+            .testmonial-card {
+                margin: 10px 5px;
+            }
+            
+            .testmonial-card .card-body {
+                padding: 1.5rem;
+            }
+            
+            .testmonial-card img {
+                width: 70px;
+                height: 70px;
+            }
+            
+            /* Blog cards mobile */
+            .blog-card .card-body {
+                padding: 1.5rem;
+            }
+            
+            .blog-card h5 {
+                font-size: 1.1rem;
+            }
+            
+            .blog-card p {
+                font-size: 0.9rem;
+            }
+            
+            /* Contact form mobile */
+            .form-control {
+                font-size: 0.9rem;
+                padding: 0.7rem;
+            }
+            
+            .contact-info-item {
+                padding: 1.5rem;
+                margin-bottom: 1rem;
+            }
+            
+            .contact-info-item i {
+                font-size: 1.5rem;
+            }
+            
+            /* Footer mobile */
+            .page-footer {
+                padding: 1.5rem 0;
+            }
+            
+            .page-footer p {
+                font-size: 0.9rem;
+            }
+            
+            /* General text adjustments */
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+            }
+            
+            h3 {
+                font-size: 1.3rem;
+            }
+            
+            h4 {
+                font-size: 1.1rem;
+            }
+            
+            h5 {
+                font-size: 1rem;
+            }
+            
+            h6.section-title {
+                font-size: 1.4rem;
+            }
+            
+            /* Container padding adjustments */
+            .container {
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+            
+            /* Navbar mobile improvements */
+            .navbar-collapse {
+                background-color: rgba(10, 17, 40, 0.98);
+                margin-top: 10px;
+                padding: 1rem;
+                border-radius: 8px;
+            }
+            
+            .navbar .nav-link {
+                padding: 0.7rem 1rem;
+                text-align: left;
+            }
+            
+            .navbar .btn-primary {
+                margin-left: 0 !important;
+                margin-top: 10px;
+                width: 100%;
+            }
+        }
+        
+        /* Additional responsive improvements for larger phones */
+        @media (min-width: 577px) and (max-width: 767px) {
+            .header {
+                padding-top: 6rem;
+                padding-bottom: 4rem;
+            }
+            
+            .infos .title {
+                font-size: 2rem !important;
+            }
+            
+            .buttons .btn {
+                padding: 0.8rem 2rem;
+            }
+            
+            section {
+                padding: 4rem 0;
+            }
+            
+            .img-wrapper {
+                height: 220px;
+            }
+        }
+        
+        /* Medium devices (tablets) */
+        @media (min-width: 768px) and (max-width: 991px) {
+            .header {
+                padding-top: 7rem;
+                padding-bottom: 5rem;
+            }
+            
+            section {
+                padding: 5rem 0;
+            }
+            
+            .custom-card .card-body {
+                padding: 1.5rem;
+            }
+            
+            .img-wrapper {
+                height: 230px;
             }
         }
     </style>
