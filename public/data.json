@@ -1,0 +1,1395 @@
+{
+  "profile": {
+    "name": "Vu Thanh Tuyen",
+    "title": "AI Research Engineer",
+    "subTitle": "AI Research Engineer | Specialized in LLMs, Agents, and MLOps",
+    "avatar": "./avatar.jpg",
+    "location": "Hanoi Capital Region, Vietnam",
+    "bio": "As a passionate and driven AI Research Engineer with a solid foundation in Information Technology and Artificial Intelligence, I continuously seek out opportunities to grow through challenges and innovation.",
+    "journeyIntro": "As an AI Research Engineer and LLM/NLP Engineer, my expertise spans core AI technologies including Large Language Models (LLMs) & Agents, VLM & Vision AI, GNNs, NLP, Computer Vision, and Reinforcement Learning (RL). I have deep expertise in Machine Learning and Deep Learning, with hands-on experience in Fine-Tuning, HuggingFace Transformers, and Function Calling. Beyond research, I specialize in System Design, LLMOPs & MLOps & Security, and DevOps & CI/CD to architect and deploy scalable, secure AI systems. Combining these with a strong focus on Problem Solving and Fullstack Vibe-Coding, I build robust end-to-end applications and thrive in dynamic environments requiring deep technical knowledge and cross-functional versatility.",
+    "tags": [
+      "LLMs & Agents",
+      "System Design",
+      "LLMOPs & MLOps & Security",
+      "LLM/NLP Engineer",
+      "Problem Solving",
+      "Fullstack Vibe-Coding",
+      "VLM & Vision AI",
+      "HuggingFace Transformers",
+      "Fine-Tuning",
+      "Function Calling",
+      "DevOps & CI/CD",
+      "Machine Learning",
+      "Deep Learning",
+      "Reinforcement Learning (RL)",
+      "NLP",
+      "Computer Vision",
+      "GNNs"
+    ],
+    "cvUrl": "./CV.pdf",
+    "email": "tuyenvt455@gmail.com",
+    "socials": {
+      "github": "https://github.com/SuZeAI",
+      "linkedin": "https://www.linkedin.com/in/suzeai/",
+      "x": "https://x.com/suzeai",
+      "facebook": "https://www.facebook.com/tuyen.vu.403019"
+    }
+  },
+  "journey": [
+    {
+      "role": "AI Research Engineer",
+      "company": "FPT Corporation",
+      "period": "March 2026 - Present",
+      "description": "• Researching and deploying state-of-the-art Large Language Model (LLM) agents, building multi-agent frameworks, and architecting scalable enterprise AI systems."
+    },
+    {
+      "role": "Academic Advisor",
+      "company": "PAYT - CLB Trí tuệ nhân tạo PTIT",
+      "period": "January 2025 - Present",
+      "description": "• Mentoring members of the PTIT AI Club, providing guidance on Machine Learning, NLP, and agent frameworks, and supervising academic research projects."
+    },
+    {
+      "role": "AI Research Engineer",
+      "company": "HBLAB Joint Stock Company",
+      "period": "May 2025 - March 2026",
+      "description": "• Extractor Date: Developed a Japanese medical-date extraction agent using the OpenAI API, achieving 87% accuracy through domain-specific data processing and evaluation.\n• GenQuestion (Testcase Generation Agent): Built automated test and QA question generation agents based on project specifications, significantly reducing QA workload; evaluated 9/10 by QA Leads.\n• AI-Project (Multi-Role Agent System): Developed an AI-driven project management system with agents acting as PM, Tester, and other roles; integrated with GitLab, Google Drive, and additional tools via MCP to automate project workflows.\n• Agent Dependency: Researched and developed an agent to update source code dependency information when versions change, constructing code graphs and applying context engineering techniques."
+    },
+    {
+      "role": "AI Assistant",
+      "company": "PTIT IEC Lab & Naver Lab",
+      "period": "September 2023 - Present",
+      "description": "• Malware Detection in Android Applications: Co-led a project leveraging Graph Neural Networks (GNNs) with fine-tuned Word2Vec embeddings to model function names in call graphs; exploited shared naming conventions in malware and achieved 98.8% F1-score.\n• Graph Fusion Detection in Smart Contracts: Researched vulnerabilities in smart contracts with a focus on error classification; developed graph-based models using batch training to capture feature interactions. Paper published in ICT Express (Q1-ranked conference).\n• Utilization of Advanced Frameworks: Applied PyTorch, Torch Geometric, Deep Graph Library (DGL), Google Colab, and Kaggle for model training, evaluation, and analysis.\n• Other Experiences: Participation in Knowledge Seminars, NLP Knowledge (CS224N, CS224U); Support for GCN-Computer Vision Project."
+    },
+    {
+      "role": "AI Research Engineer",
+      "company": "Viettel Cyber Security",
+      "period": "December 2023 - May 2025",
+      "description": "• Intelligent Code Vulnerability Detection: Conducted problem surveys, reviewed relevant research, collected and analyzed datasets, and built models using AST, CFG, and DFG graphs. Leveraged PyTorch, PyTorch Lightning, Scikit-learn, Torch Geometric, configured via Hydra, and tested with Pytest.\n• Chatbot Development & Model Finetuning: Researched Knowledge Distillation (KD) from large models such as GPT and Gemini; explored synthetic data generation, model construction, and benchmarking. Finetuned LLaMA 7B, 8B, 17B on A100 GPUs (SFT, DPO, RLHF), including experiments with Data Parallel (DP) training.\n• MLOps Experience (Airflow, MLflow, MinIO): Built scalable LLM training pipelines using Airflow, tracked experiments via MLflow, and managed data/model storage with MinIO.\n• Customer Status Alert System (Production): Performed data analysis, cleaning, and SHAP-based feature filtering; trained predictive models and deployed the system to production.\n• LLM Training Configuration (DeepSpeed, Unsloth): Customized training workflows using DeepSpeed and Unsloth, streamlining processes into single YAML configuration files for more efficient LLM training.\n• Other Experiences: Self-Learning & Problem-Solving; Pretrained Language Models (PLMs); Viettel AIHub Competition."
+    }
+  ],
+  "academia": [
+    {
+      "degree": "Academic Advisor",
+      "school": "PAYT - CLB Trí tuệ nhân tạo PTIT",
+      "period": "January 2025 - Present",
+      "details": "• Mentoring members of the PTIT AI Club, providing guidance on Machine Learning, NLP, and agent frameworks, and supervising academic research projects.",
+      "focusAreas": [
+        "Machine Learning & NLP",
+        "Agentic AI Frameworks",
+        "Academic Mentorship",
+        "Research Supervision"
+      ]
+    },
+    {
+      "degree": "AI Assistant",
+      "school": "PTIT IEC Lab & Naver Lab",
+      "period": "September 2023 - Present",
+      "details": "○ Malware Detection in Android Applications: Co-led a project leveraging Graph Neural Networks (GNNs) with fine-tuned Word2Vec embeddings to model function names in call graphs; exploited shared naming conventions in malware and achieved 98.8% F1-score. ([GitHub](https://github.com/SuZeAI/Detect_Androi_Malware))\n○ Graph Fusion Detection in Smart Contracts: Researched vulnerabilities in smart contracts with a focus on error classification; developed graph-based models using batch training to capture feature interactions. Paper currently under review at a Q1 Journal ICT express. ([GitHub](https://github.com/SuZeAI/GraphFusionVulDetect-Research))\n○ Utilization of Advanced Frameworks: Applied PyTorch, Torch Geometric, Deep Graph Library (DGL), Google Colab, and Kaggle for model training, evaluation, and analysis.\n○ Other Experiences: Participation in Knowledge Seminars, NLP Knowledge (CS224N, CS224U); Support for GCN-Computer Vision Project.",
+      "focusAreas": [
+        "Malware Detection (GNNs)",
+        "Smart Contract Security",
+        "Deep Graph Library (DGL)",
+        "NLP (CS224N, CS224U)"
+      ]
+    },
+    {
+      "degree": "IT - Posts and Telecommunications Institute of Technology",
+      "school": "PTIT, Hanoi",
+      "period": "September 2021 - March 2026",
+      "details": "GPA: 3.35/4.0. Advisor for PAYT Club, member of IEC and Naver Lab. Recipient of PTIT Academic Scholarships for Excellent GPA (3.6/4 in first-semester)."
+    },
+    {
+      "degree": "Samsung AI Coursework & Certification",
+      "school": "Samsung Innovation Campus (PTIT x Samsung)",
+      "period": "2022",
+      "details": "Excelled in coursework covering Python for AI, Machine Learning, Deep Learning, and Computer Vision. Served as an official mentor for the PTIT Samsung program."
+    }
+  ],
+  "projects": [
+    {
+      "id": "slidegen-backend",
+      "name": "SlideGenFunctionCalling",
+      "description": "Project uses Gemini LLM and Vision-Language Models (VLM) to automatically generate presentation slides from documents. It streamlines content summarization and design, enabling efficient slide creation.",
+      "tech": [
+        "Python",
+        "Gemini",
+        "VLM",
+        "AI",
+        "agent workflow",
+        "agentic ai",
+        "agentic workflow",
+        "large language models",
+        "vision language model"
+      ],
+      "stars": 7,
+      "url": "https://github.com/SuZeAI/SlideGenFunctionCalling",
+      "featured": true,
+      "role": "Creator & Lead Dev"
+    },
+    {
+      "id": "slidegen-frontend",
+      "name": "slide-genie",
+      "description": "This project focuses on the development and optimization of the SlideGen frontend for a production environment. It involves building a scalable, maintainable, and high-performance user interface.",
+      "tech": [
+        "TypeScript",
+        "React",
+        "Vite",
+        "Tailwind",
+        "agentic ai",
+        "automation",
+        "front end development",
+        "optimization algorithms",
+        "react",
+        "slidegen",
+        "tailwindcss",
+        "typescript",
+        "workflow"
+      ],
+      "stars": 6,
+      "url": "https://github.com/SuZeAI/slide-genie",
+      "featured": true,
+      "role": "Frontend Architect"
+    },
+    {
+      "id": "adm-permissions",
+      "name": "ADM Permissions 2024",
+      "description": "Malware detection in APK files leveraging BERT & RoBERTa for feature extraction; moved beyond traditional graph-based approaches to create features suitable for conventional model recognition.",
+      "tech": [
+        "Python",
+        "BERT",
+        "RoBERTa",
+        "APK-Analysis",
+        "Jupyter Notebook",
+        "android application",
+        "classification",
+        "gnn model",
+        "machine",
+        "w2vec model"
+      ],
+      "stars": 2,
+      "url": "https://github.com/SuZeAI/Detect_Androi_Malware",
+      "featured": true,
+      "role": "Lead Researcher"
+    },
+    {
+      "id": "contrastive-adm",
+      "name": "Contrastive Learning for ADM",
+      "description": "Applied contrastive learning + Graph Neural Networks (GNNs) for classification; achieved 98% accuracy in detecting complex malware.",
+      "tech": [
+        "Python",
+        "Contrastive-Learning",
+        "GNN",
+        "PyTorch",
+        "contrastive learning",
+        "detection",
+        "gcn",
+        "graph",
+        "graph reduction",
+        "llm"
+      ],
+      "stars": 1,
+      "url": "https://github.com/SuZeAI/Graph_reduce_Contrastive_Learning_ADM",
+      "featured": false,
+      "role": "Creator"
+    },
+    {
+      "id": "tts-text-normalization",
+      "name": "Text Normalization for TTS",
+      "description": "Fine-tuned Qwen models to normalize dates/numbers for text-to-speech pipelines, incorporating advanced preprocessing and postprocessing rules. Achieved 80% accuracy.",
+      "tech": [
+        "Qwen",
+        "Fine-tuning",
+        "TTS",
+        "NLP",
+        "Jupyter Notebook",
+        "finetuning llms",
+        "preprocessing techniques",
+        "rule based system",
+        "training",
+        "unsloth"
+      ],
+      "stars": 2,
+      "url": "https://github.com/SuZeAI/text-normalization",
+      "featured": false,
+      "role": "AI Engineer"
+    },
+    {
+      "id": "job-recommender",
+      "name": "Job Recommendation System",
+      "description": "Analyzed LinkedIn dataset to extract features and build a vector database using Sentence Transformer L6v2 embeddings + FAISS for efficient retrieval and recommendation.",
+      "tech": [
+        "Sentence-Transformers",
+        "FAISS",
+        "Vector-DB",
+        "React",
+        "Jupyter Notebook",
+        "flask",
+        "recommender system",
+        "sentence transformers",
+        "torch"
+      ],
+      "stars": 1,
+      "url": "https://github.com/SuZeAI/Jobs_Recommend_Core",
+      "featured": false,
+      "role": "Fullstack Developer"
+    },
+    {
+      "id": "crewai-contrib",
+      "name": "crewAI Contributions",
+      "description": "Contributed to the CrewAI repository (PR #3856) to enhance execution stability and add crew streaming support for real-time agent execution feedback.",
+      "tech": [
+        "Python",
+        "crewAI",
+        "Open-Source",
+        "Agents",
+        "agents",
+        "ai",
+        "ai agents",
+        "aiagentframework",
+        "llms"
+      ],
+      "stars": 53533,
+      "url": "https://github.com/crewAIInc/crewAI",
+      "featured": true,
+      "role": "Contributor"
+    },
+    {
+      "id": "adm-gin-apicall",
+      "name": "ADM_GIN_APICALL",
+      "description": "Classify APK applications using a combination of GIN, Vector Permission and ML.",
+      "tech": [
+        "Jupyter Notebook",
+        "android app",
+        "gin",
+        "graph",
+        "machine learning",
+        "permission android"
+      ],
+      "stars": 1,
+      "url": "https://github.com/SuZeAI/ADM_GIN_APICALL",
+      "featured": false,
+      "role": "Creator"
+    },
+    {
+      "id": "ai-tetris-2024",
+      "name": "AI_Tetris_2024",
+      "description": "This repository contains an AI agent for playing Tetris using the Deep Q-Learning (DQL) algorithm with fine-tuned rewards. It focuses on optimizing decision-making and performance through reinforcement learning techniques.",
+      "tech": [
+        "Jupyter Notebook",
+        "agent",
+        "deep q learning",
+        "reward",
+        "tetris game"
+      ],
+      "stars": 2,
+      "url": "https://github.com/SuZeAI/AI_Tetris_2024",
+      "featured": false,
+      "role": "Creator"
+    },
+    {
+      "id": "ai-virtual-wardrobe",
+      "name": "AI_Virtual_Wardrobe",
+      "description": "No description provided.",
+      "tech": [],
+      "stars": 0,
+      "url": "https://github.com/SuZeAI/AI_Virtual_Wardrobe",
+      "featured": false,
+      "role": "Fork / Contributor"
+    },
+    {
+      "id": "algorithm-ai",
+      "name": "Algorithm_AI",
+      "description": "My Machine Learning blog",
+      "tech": [
+        "machine learning"
+      ],
+      "stars": 2,
+      "url": "https://github.com/SuZeAI/Algorithm_AI",
+      "featured": false,
+      "role": "Fork / Contributor"
+    },
+    {
+      "id": "architecture-template-api-agent",
+      "name": "Architecture_Template_API_Agent",
+      "description": "A simple FastAPI-based system for managing and invoking agent services with input/output types: text, file (URL), and image (URL).",
+      "tech": [
+        "Python",
+        "architecture api",
+        "fastapi template",
+        "sample app"
+      ],
+      "stars": 1,
+      "url": "https://github.com/SuZeAI/Architecture_Template_API_Agent",
+      "featured": false,
+      "role": "Creator"
+    },
+    {
+      "id": "awesome-llm",
+      "name": "Awesome-LLM",
+      "description": "Awesome-LLM: a curated list of Large Language Model",
+      "tech": [
+        "llm",
+        "tutorial"
+      ],
+      "stars": 3,
+      "url": "https://github.com/SuZeAI/Awesome-LLM",
+      "featured": false,
+      "role": "Fork / Contributor"
+    },
+    {
+      "id": "awesome-llm-apps",
+      "name": "awesome-llm-apps",
+      "description": "Collection of awesome LLM apps with AI Agents and RAG using OpenAI, Anthropic, Gemini and opensource models.",
+      "tech": [
+        "app collection",
+        "awesom list",
+        "chatbot",
+        "llm",
+        "machine learning",
+        "nlp"
+      ],
+      "stars": 2,
+      "url": "https://github.com/SuZeAI/awesome-llm-apps",
+      "featured": false,
+      "role": "Fork / Contributor"
+    },
+    {
+      "id": "awesome-github-profile-readme-templates",
+      "name": "awesome_github_profile_readme_templates",
+      "description": "This repository contains best profile readme's for your reference. ",
+      "tech": [
+        "readme profile",
+        "template"
+      ],
+      "stars": 2,
+      "url": "https://github.com/SuZeAI/awesome_github_profile_readme_templates",
+      "featured": false,
+      "role": "Fork / Contributor"
+    },
+    {
+      "id": "awesome-python",
+      "name": "awesome_python",
+      "description": "A curated list of awesome Python frameworks, libraries, software and resources",
+      "tech": [
+        "framework",
+        "library",
+        "python",
+        "resource",
+        "software engineering"
+      ],
+      "stars": 2,
+      "url": "https://github.com/SuZeAI/awesome_python",
+      "featured": false,
+      "role": "Fork / Contributor"
+    },
+    {
+      "id": "best-of-ml-python",
+      "name": "best_of_ml_python",
+      "description": "🏆 A ranked list of awesome machine learning Python libraries. Updated weekly.",
+      "tech": [
+        "machine"
+      ],
+      "stars": 3,
+      "url": "https://github.com/SuZeAI/best_of_ml_python",
+      "featured": false,
+      "role": "Fork / Contributor"
+    },
+    {
+      "id": "be-fe-ltw",
+      "name": "Be_Fe_LTW",
+      "description": "BTL web",
+      "tech": [
+        "JavaScript",
+        "backend",
+        "frontend",
+        "mongodb",
+        "reactjs"
+      ],
+      "stars": 1,
+      "url": "https://github.com/SuZeAI/Be_Fe_LTW",
+      "featured": false,
+      "role": "Creator"
+    },
+    {
+      "id": "book-system-design-kubernet-ssl",
+      "name": "Book_System_Design_Kubernet_SSL",
+      "description": "No description provided.",
+      "tech": [],
+      "stars": 1,
+      "url": "https://github.com/SuZeAI/Book_System_Design_Kubernet_SSL",
+      "featured": false,
+      "role": "Fork / Contributor"
+    },
+    {
+      "id": "classification-animal",
+      "name": "Classification_Animal",
+      "description": "Classify dog and cat use CNN",
+      "tech": [
+        "Jupyter Notebook",
+        "classification",
+        "cnn classification",
+        "cnn keras",
+        "residual networks"
+      ],
+      "stars": 1,
+      "url": "https://github.com/SuZeAI/Classification_Animal",
+      "featured": false,
+      "role": "Creator"
+    },
+    {
+      "id": "code-c",
+      "name": "Code_C",
+      "description": "Code C in codePTIT",
+      "tech": [
+        "C",
+        "c",
+        "tutorial"
+      ],
+      "stars": 2,
+      "url": "https://github.com/SuZeAI/Code_C",
+      "featured": false,
+      "role": "Creator"
+    },
+    {
+      "id": "code-cpp",
+      "name": "Code_CPP",
+      "description": "code c++ in codePTIT",
+      "tech": [
+        "C++",
+        "cpp",
+        "tutorial code"
+      ],
+      "stars": 2,
+      "url": "https://github.com/SuZeAI/Code_CPP",
+      "featured": false,
+      "role": "Creator"
+    },
+    {
+      "id": "colorizeimage",
+      "name": "ColorizeImage",
+      "description": "This repository focuses on image colorization using state-of-the-art machine learning techniques. It provides code, models, and tutorials for converting grayscale images into vibrant, colorful versions. Suitable for developers, researchers, and enthusiasts interested in computer vision, the project covers preprocessing, model training, evaluation, ",
+      "tech": [
+        "colorization",
+        "computer vision",
+        "deep learning",
+        "image processing",
+        "neural network",
+        "python"
+      ],
+      "stars": 2,
+      "url": "https://github.com/SuZeAI/ColorizeImage",
+      "featured": false,
+      "role": "Fork / Contributor"
+    },
+    {
+      "id": "crewai",
+      "name": "crewAI",
+      "description": "Framework for orchestrating role-playing, autonomous AI agents. By fostering collaborative intelligence, CrewAI empowers agents to work together seamlessly, tackling complex tasks.",
+      "tech": [
+        "crewai",
+        "fixbug",
+        "pull requests",
+        "streaming"
+      ],
+      "stars": 2,
+      "url": "https://github.com/SuZeAI/crewAI",
+      "featured": false,
+      "role": "Fork / Contributor"
+    },
+    {
+      "id": "customer-purchase-prediction-ml-system",
+      "name": "Customer-Purchase-Prediction-ML-System",
+      "description": "A turnkey MLOps pipeline demonstrating how to go from raw events to real-time predictions at scale.",
+      "tech": [
+        "design system",
+        "machine learning",
+        "mlops project",
+        "real time"
+      ],
+      "stars": 2,
+      "url": "https://github.com/SuZeAI/Customer-Purchase-Prediction-ML-System",
+      "featured": false,
+      "role": "Fork / Contributor"
+    },
+    {
+      "id": "design-system",
+      "name": "Design_System",
+      "description": "No description provided.",
+      "tech": [],
+      "stars": 1,
+      "url": "https://github.com/SuZeAI/Design_System",
+      "featured": false,
+      "role": "Fork / Contributor"
+    },
+    {
+      "id": "devops",
+      "name": "DevOps",
+      "description": "🚀 A comprehensive DevOps course covering CI/CD, Docker, Kubernetes, and cloud deployment. 📘 Hands-on labs, real-world examples, and step-by-step guidance for aspiring DevOps engineers.",
+      "tech": [
+        "automation",
+        "ci cd",
+        "containerization",
+        "deployment",
+        "devops",
+        "infrastructure as code",
+        "monitoring"
+      ],
+      "stars": 1,
+      "url": "https://github.com/SuZeAI/DevOps",
+      "featured": false,
+      "role": "Creator"
+    },
+    {
+      "id": "docker-learning",
+      "name": "Docker_Learning",
+      "description": "This repository serves as a knowledge base for Docker, covering essential concepts, best practices, and practical applications. It provides resources for containerization, deployment, and optimization.",
+      "tech": [
+        "JavaScript",
+        "docker",
+        "docker compose",
+        "pratical",
+        "tutorial"
+      ],
+      "stars": 1,
+      "url": "https://github.com/SuZeAI/Docker_Learning",
+      "featured": false,
+      "role": "Creator"
+    },
+    {
+      "id": "dp",
+      "name": "DP",
+      "description": "This repository focuses on distributed and parallel computing with PyTorch, covering model parallelism, data parallelism, and advanced optimization techniques. It provides resources for scaling AI training and inference efficiently across multiple devices.",
+      "tech": [
+        "Jupyter Notebook",
+        "ddp",
+        "distributed",
+        "fsdp",
+        "parallel",
+        "parallel computing",
+        "parallel data",
+        "tensor parallelism"
+      ],
+      "stars": 1,
+      "url": "https://github.com/SuZeAI/DP",
+      "featured": false,
+      "role": "Creator"
+    },
+    {
+      "id": "dsa-cpp",
+      "name": "DSA_CPP",
+      "description": "Code dsa use cpp",
+      "tech": [
+        "C++",
+        "cpp",
+        "data structures and algorithms"
+      ],
+      "stars": 2,
+      "url": "https://github.com/SuZeAI/DSA_CPP",
+      "featured": false,
+      "role": "Creator"
+    },
+    {
+      "id": "dsa-python",
+      "name": "DSA_Python",
+      "description": "Code dsa use python",
+      "tech": [
+        "Python",
+        "algorithm",
+        "icpc",
+        "python"
+      ],
+      "stars": 2,
+      "url": "https://github.com/SuZeAI/DSA_Python",
+      "featured": false,
+      "role": "Creator"
+    },
+    {
+      "id": "encrypted",
+      "name": "Encrypted",
+      "description": "Language Classification from Encoded Text",
+      "tech": [
+        "Jupyter Notebook",
+        "attention",
+        "bidirectional lstm",
+        "classification",
+        "ea",
+        "eda",
+        "text",
+        "tokenizer"
+      ],
+      "stars": 1,
+      "url": "https://github.com/SuZeAI/Encrypted",
+      "featured": false,
+      "role": "Creator"
+    },
+    {
+      "id": "frontend-practice",
+      "name": "Frontend_Practice",
+      "description": "Practical HTML CSS ",
+      "tech": [
+        "SCSS",
+        "html css",
+        "tutorial"
+      ],
+      "stars": 2,
+      "url": "https://github.com/SuZeAI/Frontend_Practice",
+      "featured": false,
+      "role": "Creator"
+    },
+    {
+      "id": "game-fight-cv2",
+      "name": "Game_Fight_Cv2",
+      "description": "Hand gesture recognition game for control",
+      "tech": [
+        "Python",
+        "cv2",
+        "pygame",
+        "tkinter"
+      ],
+      "stars": 1,
+      "url": "https://github.com/SuZeAI/Game_Fight_Cv2",
+      "featured": false,
+      "role": "Creator"
+    },
+    {
+      "id": "github-tutorial",
+      "name": "GitHub_tutorial",
+      "description": "This repository provides step-by-step tutorials for mastering GitHub workflows and tools. It is designed for beginners as well as intermediate users who wish to learn about version control with Git, collaboration on GitHub, and best practices for managing software projects. The tutorials include practical examples, annotated code snippets, and hand",
+      "tech": [
+        "Python",
+        "beginer friendly",
+        "collaboration",
+        "git",
+        "github",
+        "open source",
+        "tutorial",
+        "version control"
+      ],
+      "stars": 4,
+      "url": "https://github.com/SuZeAI/GitHub_tutorial",
+      "featured": false,
+      "role": "Creator"
+    },
+    {
+      "id": "graphfusionvuldetect-research",
+      "name": "GraphFusionVulDetect-Research",
+      "description": "About This repository presents a framework for vulnerability detection using graph fusion techniques. Leveraging advanced machine learning and graph-based analysis, the project aims to identify and classify security vulnerabilities in codebases, binaries, or systems.",
+      "tech": [
+        "code analysis",
+        "research",
+        "security",
+        "vulnerability"
+      ],
+      "stars": 2,
+      "url": "https://github.com/SuZeAI/GraphFusionVulDetect-Research",
+      "featured": false,
+      "role": "Fork / Contributor"
+    },
+    {
+      "id": "hackerrank",
+      "name": "HackerRank",
+      "description": "Solution to HackerRank problems",
+      "tech": [
+        "hackerrank solutions"
+      ],
+      "stars": 2,
+      "url": "https://github.com/SuZeAI/HackerRank",
+      "featured": false,
+      "role": "Fork / Contributor"
+    },
+    {
+      "id": "iot",
+      "name": "IOT",
+      "description": "This repository provides resources, code examples, and tutorials related to Internet of Things (IoT) development. It covers a wide range of topics including device connectivity, sensor integration, cloud communication, data collection, and real-world IoT applications.",
+      "tech": [
+        "PHP",
+        "automation",
+        "embedded systems",
+        "esp8266",
+        "internet of things",
+        "iot",
+        "sensor"
+      ],
+      "stars": 3,
+      "url": "https://github.com/SuZeAI/IOT",
+      "featured": false,
+      "role": "Creator"
+    },
+    {
+      "id": "java-oop",
+      "name": "Java_OOP",
+      "description": "code java oop",
+      "tech": [
+        "Java",
+        "dsa algorithm",
+        "java",
+        "oops in java"
+      ],
+      "stars": 2,
+      "url": "https://github.com/SuZeAI/Java_OOP",
+      "featured": false,
+      "role": "Creator"
+    },
+    {
+      "id": "lightning-hydra-template",
+      "name": "lightning-hydra-template",
+      "description": "PyTorch Lightning + Hydra. A very user-friendly template for ML experimentation.  ⚡🔥⚡",
+      "tech": [
+        "hydra",
+        "pytorch lightning"
+      ],
+      "stars": 3,
+      "url": "https://github.com/SuZeAI/lightning-hydra-template",
+      "featured": false,
+      "role": "Fork / Contributor"
+    },
+    {
+      "id": "llm-course",
+      "name": "llm-course",
+      "description": "Course to get into Large Language Models (LLMs) with roadmaps and Colab notebooks.",
+      "tech": [
+        "llm",
+        "roadmap"
+      ],
+      "stars": 3,
+      "url": "https://github.com/SuZeAI/llm-course",
+      "featured": false,
+      "role": "Fork / Contributor"
+    },
+    {
+      "id": "llms-from-scratch",
+      "name": "LLMs-from-scratch",
+      "description": "Implementing a ChatGPT-like LLM from scratch, step by step",
+      "tech": [
+        "llm",
+        "scratch",
+        "step by step guide"
+      ],
+      "stars": 2,
+      "url": "https://github.com/SuZeAI/LLMs-from-scratch",
+      "featured": false,
+      "role": "Fork / Contributor"
+    },
+    {
+      "id": "llm-base",
+      "name": "LLM_Base",
+      "description": "This repo learn LLM",
+      "tech": [
+        "Jupyter Notebook",
+        "decoder",
+        "llm",
+        "transformer"
+      ],
+      "stars": 1,
+      "url": "https://github.com/SuZeAI/LLM_Base",
+      "featured": false,
+      "role": "Creator"
+    },
+    {
+      "id": "ly-thuyet-thong-tin",
+      "name": "Ly_Thuyet_Thong_Tin",
+      "description": "BTL Lý Thuyết Thông Tin (Thầy Sự)",
+      "tech": [
+        "Python",
+        "infomation theory"
+      ],
+      "stars": 2,
+      "url": "https://github.com/SuZeAI/Ly_Thuyet_Thong_Tin",
+      "featured": false,
+      "role": "Creator"
+    },
+    {
+      "id": "mamba-classification-comment",
+      "name": "Mamba_Classification_Comment",
+      "description": "Apply Mamba to classify comments as positive or negative.",
+      "tech": [
+        "Jupyter Notebook",
+        "classification",
+        "mamba state space models"
+      ],
+      "stars": 1,
+      "url": "https://github.com/SuZeAI/Mamba_Classification_Comment",
+      "featured": false,
+      "role": "Creator"
+    },
+    {
+      "id": "mysql-sqlalchemy-pandas",
+      "name": "MySQL_SQLAlchemy_Pandas",
+      "description": "Emulating MySQL codes by Pandas and SQLAlchemy",
+      "tech": [
+        "emulating",
+        "mysql database",
+        "pandas",
+        "sqlalchemy"
+      ],
+      "stars": 2,
+      "url": "https://github.com/SuZeAI/MySQL_SQLAlchemy_Pandas",
+      "featured": false,
+      "role": "Fork / Contributor"
+    },
+    {
+      "id": "my-utils",
+      "name": "My_Utils",
+      "description": "My Utils is a curated collection of tips, tricks, and utility functions designed to improve efficiency and streamline development workflows. It offers well-documented, reusable solutions across various domains with regular updates.",
+      "tech": [
+        "Python",
+        "all languages",
+        "python",
+        "tips",
+        "tricks",
+        "utilize"
+      ],
+      "stars": 1,
+      "url": "https://github.com/SuZeAI/My_Utils",
+      "featured": false,
+      "role": "Creator"
+    },
+    {
+      "id": "ner-paragraph",
+      "name": "Ner_Paragraph",
+      "description": "This project focuses on implementing Named Entity Recognition (NER) to extract meaningful entities from text data. NER is a subtask of Natural Language Processing (NLP) that identifies and categorizes entities such as names, organizations, locations, dates, and more.",
+      "tech": [
+        "Python",
+        "bert",
+        "named entity recognition",
+        "ner",
+        "phobert ner"
+      ],
+      "stars": 1,
+      "url": "https://github.com/SuZeAI/Ner_Paragraph",
+      "featured": false,
+      "role": "Creator"
+    },
+    {
+      "id": "pdf-translation",
+      "name": "PDF_Translation",
+      "description": "This project provides a tool for translating PDF documents, particularly ISO standards. It features both a command-line interface and a web interface for convenient translation management.",
+      "tech": [
+        "Python",
+        "api",
+        "flask",
+        "openai",
+        "pdf converter",
+        "translate"
+      ],
+      "stars": 1,
+      "url": "https://github.com/SuZeAI/PDF_Translation",
+      "featured": false,
+      "role": "Creator"
+    },
+    {
+      "id": "program-python",
+      "name": "Program_Python",
+      "description": "code python ptit",
+      "tech": [
+        "Python",
+        "dsa algorithm",
+        "python"
+      ],
+      "stars": 2,
+      "url": "https://github.com/SuZeAI/Program_Python",
+      "featured": false,
+      "role": "Creator"
+    },
+    {
+      "id": "pushdatakaggle",
+      "name": "PushDataKaggle",
+      "description": "Push data from Drive to Kaggle use Colab",
+      "tech": [
+        "Jupyter Notebook",
+        "colab notebook",
+        "kaggle",
+        "kaggle dataset",
+        "python3"
+      ],
+      "stars": 2,
+      "url": "https://github.com/SuZeAI/PushDataKaggle",
+      "featured": false,
+      "role": "Creator"
+    },
+    {
+      "id": "pydew-valley",
+      "name": "PyDew_Valley",
+      "description": "Proejct files for a Stardew Valley inspired game in Python",
+      "tech": [
+        "ai game hack",
+        "reinforcement learning"
+      ],
+      "stars": 2,
+      "url": "https://github.com/SuZeAI/PyDew_Valley",
+      "featured": false,
+      "role": "Fork / Contributor"
+    },
+    {
+      "id": "python-ai-tutorial",
+      "name": "Python_AI_Tutorial",
+      "description": "Python for AI samsung",
+      "tech": [
+        "Jupyter Notebook",
+        "jupyter notebook",
+        "python"
+      ],
+      "stars": 3,
+      "url": "https://github.com/SuZeAI/Python_AI_Tutorial",
+      "featured": false,
+      "role": "Creator"
+    },
+    {
+      "id": "python-the-algorithm-nn",
+      "name": "Python_The_ALgorithm_NN",
+      "description": "All Algorithms implemented in Python",
+      "tech": [
+        "algorithms",
+        "python"
+      ],
+      "stars": 2,
+      "url": "https://github.com/SuZeAI/Python_The_ALgorithm_NN",
+      "featured": false,
+      "role": "Fork / Contributor"
+    },
+    {
+      "id": "slidegen-studio",
+      "name": "slidegen-studio",
+      "description": "This project delivers a production-ready frontend for SlideGen, emphasizing scalability, performance optimization, maintainability, and a seamless user experience.",
+      "tech": [
+        "TypeScript",
+        "frontend web",
+        "slidegen",
+        "tailwindcss",
+        "typescript react"
+      ],
+      "stars": 1,
+      "url": "https://github.com/SuZeAI/slidegen-studio",
+      "featured": false,
+      "role": "Creator"
+    },
+    {
+      "id": "smart-job-suggester",
+      "name": "Smart_Job_Suggester",
+      "description": "Smart Job Suggester helps recruiters generate personalized job proposals using LinkedIn profile data, AI-powered suggestions, and customizable templates. It supports data extraction, job matching, and exporting proposals in multiple formats.",
+      "tech": [
+        "Jupyter Notebook",
+        "artificial intelligence",
+        "natural language processing",
+        "platform",
+        "recommender system"
+      ],
+      "stars": 2,
+      "url": "https://github.com/SuZeAI/Smart_Job_Suggester",
+      "featured": false,
+      "role": "Creator"
+    },
+    {
+      "id": "solidity-analyzer",
+      "name": "solidity-analyzer",
+      "description": "This project is frontend of the paper smart contract Q1",
+      "tech": [
+        "TypeScript",
+        "demo app",
+        "frontend",
+        "smart contract security",
+        "tailwindcss",
+        "typescript react"
+      ],
+      "stars": 1,
+      "url": "https://github.com/SuZeAI/solidity-analyzer",
+      "featured": false,
+      "role": "Creator"
+    },
+    {
+      "id": "ssas",
+      "name": "SSAS",
+      "description": "Sql Server Analysis Services via sql server & visual studio ",
+      "tech": [
+        "sql server database",
+        "ssas multidimensional",
+        "visual studio"
+      ],
+      "stars": 2,
+      "url": "https://github.com/SuZeAI/SSAS",
+      "featured": false,
+      "role": "Fork / Contributor"
+    },
+    {
+      "id": "suzeai",
+      "name": "SuZeAI",
+      "description": "This repository serves as the GitHub profile for SuzeAI, showcasing projects, research, and contributions across AI, cybersecurity, and software development.",
+      "tech": [
+        "readme profile"
+      ],
+      "stars": 3,
+      "url": "https://github.com/SuZeAI/SuZeAI",
+      "featured": false,
+      "role": "Creator"
+    },
+    {
+      "id": "synthesis-projects-ai-tutorial",
+      "name": "Synthesis_Projects_AI_Tutorial",
+      "description": "This repository includes AI projects across various domains, including Natural Language Processing (NLP), Computer Vision, Reinforcement Learning, Generative AI, Large Language Models (LLMs), and Generative Image models. It serves as a comprehensive resource for exploring diverse AI techniques and applications.",
+      "tech": [
+        "ai",
+        "ideas",
+        "projects",
+        "software"
+      ],
+      "stars": 1,
+      "url": "https://github.com/SuZeAI/Synthesis_Projects_AI_Tutorial",
+      "featured": false,
+      "role": "Creator"
+    },
+    {
+      "id": "template-website",
+      "name": "template_website",
+      "description": "No description provided.",
+      "tech": [
+        "TypeScript"
+      ],
+      "stars": 0,
+      "url": "https://github.com/SuZeAI/template_website",
+      "featured": false,
+      "role": "Creator"
+    },
+    {
+      "id": "tetris-ai-dg",
+      "name": "Tetris_AI_DG",
+      "description": "AI tetris use Deep q-learning",
+      "tech": [
+        "Python",
+        "deep learning",
+        "q learning",
+        "reinforcement learning",
+        "tetris game"
+      ],
+      "stars": 1,
+      "url": "https://github.com/SuZeAI/Tetris_AI_DG",
+      "featured": false,
+      "role": "Creator"
+    },
+    {
+      "id": "tetris-synthesis",
+      "name": "Tetris_synthesis",
+      "description": "Synthesis about AI Contest",
+      "tech": [
+        "Python",
+        "generic",
+        "reinforcement learning",
+        "tetris game"
+      ],
+      "stars": 1,
+      "url": "https://github.com/SuZeAI/Tetris_synthesis",
+      "featured": false,
+      "role": "Creator"
+    },
+    {
+      "id": "tool-schedule-cmd",
+      "name": "Tool_Schedule_CMD",
+      "description": "Tool to execute commands at a predetermined time and can run in background.",
+      "tech": [
+        "Shell",
+        "bash",
+        "execute command",
+        "run in background",
+        "run in terminal"
+      ],
+      "stars": 3,
+      "url": "https://github.com/SuZeAI/Tool_Schedule_CMD",
+      "featured": false,
+      "role": "Creator"
+    },
+    {
+      "id": "transformers",
+      "name": "transformers",
+      "description": "🤗 Transformers: State-of-the-art Machine Learning for Pytorch, TensorFlow, and JAX.",
+      "tech": [
+        "Python",
+        "huggingface transformers",
+        "learning",
+        "model"
+      ],
+      "stars": 3,
+      "url": "https://github.com/SuZeAI/transformers",
+      "featured": false,
+      "role": "Fork / Contributor"
+    },
+    {
+      "id": "transformers-tutorials",
+      "name": "Transformers-Tutorials",
+      "description": "This repository contains demos I made with the Transformers library by HuggingFace.",
+      "tech": [
+        "transformer",
+        "tutorial"
+      ],
+      "stars": 2,
+      "url": "https://github.com/SuZeAI/Transformers-Tutorials",
+      "featured": false,
+      "role": "Fork / Contributor"
+    },
+    {
+      "id": "trashsortinggame-ptit",
+      "name": "TrashSortingGame_PTIT",
+      "description": "This repository contains a trash sorting game developed to raise environmental awareness and promote sustainable habits. Through interactive gameplay, users learn to categorize waste correctly, helping to reinforce recycling best practices. ",
+      "tech": [
+        "education",
+        "game",
+        "interactive",
+        "recycling",
+        "trash sorting"
+      ],
+      "stars": 2,
+      "url": "https://github.com/SuZeAI/TrashSortingGame_PTIT",
+      "featured": false,
+      "role": "Fork / Contributor"
+    },
+    {
+      "id": "tseek",
+      "name": "TSeek",
+      "description": "This repository explores Tseek's application of advanced technologies to optimize model training, similar to DeepSeek. It focuses on enhancing efficiency, scalability, and performance in AI model development.",
+      "tech": [
+        "Python",
+        "ai",
+        "fine tuning",
+        "llm",
+        "optimizer",
+        "training"
+      ],
+      "stars": 1,
+      "url": "https://github.com/SuZeAI/TSeek",
+      "featured": false,
+      "role": "Creator"
+    },
+    {
+      "id": "vat-li-thi-nghiem-3",
+      "name": "Vat_li_thi_nghiem_3",
+      "description": "Summary of Physics 3.",
+      "tech": [
+        "physics"
+      ],
+      "stars": 2,
+      "url": "https://github.com/SuZeAI/Vat_li_thi_nghiem_3",
+      "featured": false,
+      "role": "Creator"
+    },
+    {
+      "id": "vqa",
+      "name": "VQA",
+      "description": "Visual question answering (VQA)",
+      "tech": [
+        "Jupyter Notebook",
+        "vqa"
+      ],
+      "stars": 1,
+      "url": "https://github.com/SuZeAI/VQA",
+      "featured": false,
+      "role": "Creator"
+    }
+  ],
+  "products": [
+    {
+      "id": "slidegen-api",
+      "name": "SlideGen Core API",
+      "description": "A developer-friendly REST API to convert documents (PDF, Docx, Text) into fully formatted PowerPoint presentations using Gemini and VLM models.",
+      "tech": [
+        "FastAPI",
+        "Python",
+        "Docker"
+      ],
+      "price": "$19/month",
+      "url": "#",
+      "badge": "SaaS API"
+    },
+    {
+      "id": "presentation-vlm-templates",
+      "name": "VLM Slide Templates Kit",
+      "description": "A curated package of 50+ layout templates optimized for Vision-Language Models to render pixel-perfect presentation slides automatically.",
+      "tech": [
+        "JSON",
+        "Figma",
+        "CSS"
+      ],
+      "price": "Free / Open Source",
+      "url": "#",
+      "badge": "Templates"
+    }
+  ],
+  "publications": [
+    {
+      "title": "GraphFusionVulDetect: Graph Fusion Detection in Smart Contracts",
+      "venue": "ICT Express (Q1 Journal) - Published (2025)",
+      "description": "Researched vulnerabilities in smart contracts with a focus on error classification, developing graph-based models using batch training to capture feature interactions."
+    },
+    {
+      "title": "SlideGen Paper: Multi-Agent LLM Slide Template Generator",
+      "venue": "FAIR Conference - Published (2025)",
+      "description": "Published research on multi-agent template generation pipelines, detailing standard planning nodes and template heuristics."
+    },
+    {
+      "title": "Android Malware Detection via Call Graphs & GNNs",
+      "venue": "PTIT Academy Journal - Published (2024)",
+      "description": "Exploited call graph semantics and fine-tuned word embeddings to identify malicious Android apps with a 98.8% F1-score."
+    }
+  ],
+  "competitions": [
+    {
+      "title": "Olympic AI National (OlpAI'25)",
+      "award": "First Prize National | Team Winner",
+      "year": "2025"
+    },
+    {
+      "title": "Olympic AI Northern Region (OlpAI'25)",
+      "award": "Rank 1 at PTIT | Top 5 Northern Region | Top 16 Vietnam",
+      "year": "2024"
+    },
+    {
+      "title": "AI Challenge PTIT",
+      "award": "3rd Prize (2024) & Prize Winner (2022)",
+      "year": "2024"
+    },
+    {
+      "title": "Thucchien.ai Hackathon",
+      "award": "Selected among the Top 100",
+      "year": "2023"
+    },
+    {
+      "title": "PTIT Academic Scholarship",
+      "award": "Excellent Academic Scholarship",
+      "year": "2021"
+    },
+    {
+      "title": "Australia & Vietnam Scholarship",
+      "award": "Scholarship Recipient",
+      "year": "2025"
+    },
+    {
+      "title": "Samsung Python for AI Program",
+      "award": "Teaching Assistant & Program Mentor (Samsung x PTIT 2024)",
+      "year": "2024"
+    },
+    {
+      "title": "Google 'Crash Course on Python'",
+      "award": "Certified",
+      "year": "2022"
+    },
+    {
+      "title": "JAIST & PTIT Joint Committee",
+      "award": "Certified organizing committee member",
+      "year": "2023"
+    },
+    {
+      "title": "Mathematics District & Provincial Olympics",
+      "award": "2nd Prize in Mathematics (Provincial Level, 12th Grade) | 1st Prize (District Level, 8th Grade) | Encouragement Prize (District Level, 7th Grade)",
+      "year": "Earlier"
+    }
+  ],
+  "skills": {
+    "Programming": [
+      "Python",
+      "C",
+      "C++",
+      "Java"
+    ],
+    "Machine Learning & Deep Learning": [
+      "PyTorch",
+      "TensorFlow",
+      "Keras",
+      "Scikit-learn",
+      "DeepSpeed",
+      "Unsloth",
+      "Hugging Face"
+    ],
+    "LLM & NLP": [
+      "LLaMA",
+      "Mistral",
+      "RoBERTa",
+      "Sentence-BERT",
+      "RAG",
+      "Text Generation",
+      "Context Engineering"
+    ],
+    "Agent Frameworks": [
+      "crewAI",
+      "ADK",
+      "LangChain",
+      "MCP (Model Context Protocol)"
+    ],
+    "DevOps & MLOps": [
+      "Git",
+      "Linux",
+      "Docker",
+      "Airflow",
+      "MLflow",
+      "MinIO",
+      "MySQL"
+    ]
+  },
+  "blogs": [
+    {
+      "id": "building-slidegen",
+      "title": "Building SlideGen: Reimagining Slides with Gemini and VLMs",
+      "date": "2026-06-10",
+      "readTime": "6 min read",
+      "tags": [
+        "AI",
+        "Gemini",
+        "VLM",
+        "Python"
+      ],
+      "snippet": "How we built a system that automatically generates gorgeous slides from text documents using Large Language Models and Vision-Language Models.",
+      "content": "### Introduction\n\nCreating presentation slides is one of the most common administrative tasks in the professional and academic worlds. Yet, it remains time-consuming. With the advent of Large Language Models (LLMs) and Vision-Language Models (VLMs), we saw an opportunity to automate this workflow completely.\n\nIn this article, I walk through the architecture of **SlideGen**, a project designed to ingest research papers or project documents and output ready-to-present, beautifully styled slides.\n\n### The Architecture\n\nSlideGen is split into two primary layers:\n\n1. **The Orchestration Layer (Python & Gemini)**:\n   - Uses Gemini's **Function Calling** capabilities to define structured presentation nodes.\n   - Instead of receiving unstructured text, our pipeline instructs Gemini to call a `generate_slide` function, yielding strict JSON parameters like title, bullet points, layout suggestions, and visual focus areas.\n\n2. **The Verification & Design Layer (VLM)**:\n   - Once a draft slide layout is rendered, we pass the image of the slide back to a Vision-Language Model.\n   - The VLM evaluates contrast, text overlaps, padding, and readability, suggesting minor position and style tweaks.\n\n```mermaid\ngraph TD\n    A[Document Input] --> B[Gemini Function Calling]\n    B --> C[Structure Slides JSON]\n    C --> D[HTML/Canvas Render]\n    D --> E[Vision-Language Model VLM]\n    E -->|Design Feedback| B\n    D --> F[Final PPTX/PDF Export]\n```\n\n### Key Technical Challenges\n\n- **Function Calling Consistency**: Prompt engineering Gemini to adhere *exactly* to the slide schema was solved by supplying typescript definition strings and strict JSON schema restrictions.\n- **Design Aesthetics**: Letting AI construct layout variables often leads to cluttered slides. We restricted layouts to 4 pre-vetted design systems (Minimalist, Technical, Modern Accent, Dark Theme).\n\n### Next Steps\n\nWe are currently optimizing the SlideGen frontend in [slide-genie](https://github.com/SuZeAI/slide-genie) to support interactive user editing, dragging, and real-time LLM-assisted rewriting. Feel free to check out the repo and contribute!"
+    },
+    {
+      "id": "modern-git-workflows",
+      "title": "Modern Git Workflows for Developer Teams",
+      "date": "2026-05-24",
+      "readTime": "4 min read",
+      "tags": [
+        "Git",
+        "GitHub",
+        "DevOps"
+      ],
+      "snippet": "Mastering GitHub doesn't have to be hard. A look at branching strategies, pull request etiquette, and automated workflows.",
+      "content": "### Why Git Workflows Matter\n\nWhen working solo, committing directly to `main` is tempting and fast. However, as teams scale, this approach leads to merge conflicts, broken builds, and undocumented features. Implementing a standard Git workflow is the single most effective way to improve code quality and deployment safety.\n\nIn this article, we review the workflow I teach in my [GitHub Tutorial](https://github.com/SuZeAI/GitHub_tutorial).\n\n### 1. Branching Strategy: Feature Branches\n\nNever commit directly to `main`. Every feature, bugfix, or refactor should live in its own branch named with a clear pattern:\n- `feature/slidegen-vlm-validation`\n- `bugfix/issue-42-routing`\n- `refactor/clean-tailwind-classes`\n\n```\nmain      o---------------------o----->\n           \\                   / (PR)\nfeature     o-----o-----o-----o\n```\n\n### 2. The Power of Pull Requests (PRs)\n\nA Pull Request is not just a request to merge code; it is a collaborative platform. A great PR:\n- Explains **why** the change was made, not just *what* was changed.\n- Links related issues (e.g., `Closes #12`).\n- Includes screenshots or GIFs if there are UI updates.\n- Has been self-reviewed and linted locally.\n\n### 3. Automating Checklists with GitHub Actions\n\nDon't rely on humans to verify code styling or run tests. Create a `.github/workflows/ci.yml` pipeline that triggers on every pull request to run:\n1. Linters (`npm run lint` or `flake8`)\n2. Automated unit tests\n3. Build verification\n\nThis ensures that only building, clean code is ever merged into your primary branch."
+    },
+    {
+      "id": "android-malware-gnn",
+      "title": "Graph Neural Networks & Contrastive Learning for Android Malware Detection",
+      "date": "2026-05-15",
+      "readTime": "5 min read",
+      "tags": [
+        "GNN",
+        "PyTorch Geometric",
+        "Security",
+        "Android"
+      ],
+      "snippet": "How to model APK function calls as graphs and leverage Graph Neural Networks (GNNs) with contrastive learning to detect malicious patterns with over 98% accuracy.",
+      "content": "### Introduction\n\nWith billions of active devices, Android is the primary target for mobile malware. Traditional signature-based detection can easily be bypassed by obfuscation or packers. In our recent research at the PTIT IEC Lab & Naver Lab, we co-led an initiative to model application code semantically using Graph Neural Networks (GNNs) and fine-tuned word embeddings, achieving a **98.8% F1-score**.\n\nHere is how the system is structured.\n\n### 1. Constructing Call Graphs\n\nInstead of examining the Android manifest permissions alone (which leads to high false-positive rates), we decompile the APK to retrieve its **Control Flow Graphs (CFG)** and **Call Graphs**. A call graph represents the execution relationships between methods:\n\n```mermaid\ngraph LR\n    A[onCreate] --> B[initializeSDK]\n    B --> C[getLocation]\n    C --> D[sendSMSInBackground]\n    style D fill:#f43f5e,stroke:#333,stroke-width:2px\n```\n\nIn this graph:\n- **Nodes** represent functions/methods.\n- **Edges** represent function calls.\n\n### 2. Contextual Node Embeddings\n\nTraditional GNNs use simple one-hot encodings of node types. We went a step further:\n1. We extract the method names (e.g., `getDeviceId`, `execCommand`).\n2. We clean and split these names into tokens.\n3. We run them through a fine-tuned **Word2Vec (w2vec)** or BERT model to generate semantic embeddings.\n\nBecause malware authors often share or obfuscate naming conventions in predictable ways, mapping function names to dense vector spaces allows the model to generalize to unseen malware families.\n\n### 3. Graph Convolutional Network (GCN / GIN)\n\nWe pass the call graph with semantic node features to a **Graph Isomorphism Network (GIN)**. The GIN aggregates local neighborhood structures, capturing patterns of suspicious API calls occurring close to each other.\n\n```python\nimport torch\nimport torch.nn.functional as F\nfrom torch_geometric.nn import GINConv, global_add_pool\n\nclass GINMalwareDetector(torch.nn.Module):\n    def __init__(self, input_dim, hidden_dim, num_classes=2):\n        super().__init__()\n        # Simple GIN Convolution layers\n        self.conv1 = GINConv(torch.nn.Sequential(\n            torch.nn.Linear(input_dim, hidden_dim),\n            torch.nn.ReLU(),\n            torch.nn.Linear(hidden_dim, hidden_dim)\n        ))\n        self.conv2 = GINConv(torch.nn.Sequential(\n            torch.nn.Linear(hidden_dim, hidden_dim),\n            torch.nn.ReLU(),\n            torch.nn.Linear(hidden_dim, hidden_dim)\n        ))\n        self.fc = torch.nn.Linear(hidden_dim, num_classes)\n\n    def forward(self, x, edge_index, batch):\n        x = F.relu(self.conv1(x, edge_index))\n        x = F.relu(self.conv2(x, edge_index))\n        x = global_add_pool(x, batch)\n        return F.log_softmax(self.fc(x), dim=-1)\n```\n\n### 4. Contrastive Learning for Class Imbalance\n\nSince malware samples are scarce compared to clean applications, we applied **Contrastive Learning**. By training the GNN to minimize the distance between representations of similar malware families and maximize the distance to clean apps, the model learned highly robust decision boundaries even under low-resource settings.\n\nFeel free to check out the research and code in [Detect_Androi_Malware](https://github.com/SuZeAI/Detect_Androi_Malware) and [Graph_reduce_Contrastive_Learning_ADM](https://github.com/SuZeAI/Graph_reduce_Contrastive_Learning_ADM)."
+    },
+    {
+      "id": "text-normalization-tts",
+      "title": "Finetuning LLMs for Text Normalization in TTS Pipelines",
+      "date": "2026-04-22",
+      "readTime": "4 min read",
+      "tags": [
+        "LLMs",
+        "Fine-Tuning",
+        "Unsloth",
+        "TTS"
+      ],
+      "snippet": "Solving the text normalization problem in Text-to-Speech (TTS) systems by fine-tuning small LLMs (Qwen) with Unsloth and custom context rules.",
+      "content": "### Introduction\n\nIn Text-to-Speech (TTS) pipelines, **Text Normalization (TN)** is the crucial first step. Before audio can be generated, written symbols must be converted into spoken words.\nFor instance:\n- `$100` -> \"one hundred dollars\"\n- `12/03/2026` -> \"March twelfth, two thousand twenty-six\" (or \"ngày mười hai tháng ba năm hai nghìn không trăm hai sáu\" in Vietnamese)\n\nWhile rule-based engines (using Regex or FSTs) are highly predictable, they struggle with context-dependent ambiguity. In our project [text-normalization](https://github.com/SuZeAI/text-normalization), we fine-tuned small LLMs using **Unsloth** to achieve high-accuracy normalization.\n\n### Why Rule-Based Systems Fail\n\nConsider the word \"min\" in the following contexts:\n1. \"Cook for 5 min\" -> \"minutes\" (abbreviation)\n2. \"The min value is 2\" -> \"minimum\" (abbreviation)\n3. \"Min is a common name\" -> \"Min\" (proper noun)\n\nA regex engine will match \"min\" indiscriminately, leading to awkward speech synthesis. An LLM solves this by processing the surrounding context.\n\n### Fine-Tuning with Unsloth\n\nTo deploy in production, we cannot run heavy 70B models. We need a lightweight LLM (such as Qwen2-1.5B or 7B) that can run at sub-10ms latencies.\n\nWe used **Unsloth** for parameter-efficient fine-tuning (PEFT/LoRA) because:\n- It uses up to 80% less memory.\n- It is 2x to 5x faster than standard PyTorch/HuggingFace implementations.\n- It supports 4-bit quantization natively.\n\nHere is a look at our training script layout:\n\n```python\nfrom unsloth import FastLanguageModel\nimport torch\n\nmax_seq_length = 512\nmodel, tokenizer = FastLanguageModel.from_pretrained(\n    model_name = \"Qwen/Qwen2-1.5B-Instruct\",\n    max_seq_length = max_seq_length,\n    load_in_4bit = True,\n)\n\n# Apply LoRA adapters\nmodel = FastLanguageModel.get_peft_model(\n    model,\n    r = 16,\n    target_modules = [\"q_proj\", \"k_proj\", \"v_proj\", \"o_proj\", \"gate_proj\", \"up_proj\", \"down_proj\"],\n    lora_alpha = 16,\n    lora_dropout = 0,\n    bias = \"none\",\n    use_gradient_checkpointing = \"unsloth\",\n)\n```\n\n### Preprocessing and Post-Processing\n\nEven with fine-tuning, LLMs can occasionally hallucinate or output extra conversational text. To counter this, we designed a wrapper around the model:\n1. **Classifier Pre-filter**: Identifies if a sentence contains any non-standard words (numbers, dates, units). If not, we skip the LLM entirely to save compute.\n2. **Grammar Post-processor**: Restricts the LLM's output vocabulary using custom logit biases or regex parsers, ensuring it only outputs normalized text strings.\n\n### Benchmarks\n\nOur system achieved over **80% accuracy** on highly ambiguous Vietnamese text classification and normalization benchmarks, outperforming baseline rule-based systems by 15% in complex contexts. Check out the source code at [text-normalization](https://github.com/SuZeAI/text-normalization)."
+    },
+    {
+      "id": "smart-contract-graph-fusion",
+      "title": "Graph Fusion Techniques in Smart Contract Vulnerability Detection",
+      "date": "2026-03-10",
+      "readTime": "5 min read",
+      "tags": [
+        "Smart Contracts",
+        "GNN",
+        "Security",
+        "Graph Fusion"
+      ],
+      "snippet": "A deep dive into our published research on fusing AST, CFG, and DFG representations of Solidity code into unified graph models for smart contract auditing.",
+      "content": "### Introduction\n\nDecentralized Finance (DeFi) has revolutionized the financial sector, but it has also attracted malicious actors. Vulnerabilities in smart contracts have led to billions of dollars in losses. Static analysis tools like Slither or Mythril exist, but they suffer from high false-positive rates.\n\nIn our paper published in **ICT Express (Q1 Journal)**, we proposed **GraphFusionVulDetect**, a framework that fuses multiple program representations into a unified graph to detect contract vulnerabilities using deep learning.\n\n### The Graph Fusion Architecture\n\nMost vulnerability detection tools convert source code into a single graph representation. However, each representation highlights a different aspect of the program:\n- **Abstract Syntax Tree (AST)**: Captures hierarchical structure and nesting.\n- **Control Flow Graph (CFG)**: Captures execution order and branching logic.\n- **Data Flow Graph (DFG)**: Tracks variable dependencies and data mutations.\n\n```mermaid\ngraph TD\n    AST[AST: Syntax Structure] --> GF[Graph Fusion Engine]\n    CFG[CFG: Execution Flow] --> GF\n    DFG[DFG: Data Mutations] --> GF\n    GF --> GNN[Unified GNN Model]\n    GNN --> Pred[Vulnerability Prediction]\n```\n\nBy fusing AST, CFG, and DFG, our model retains syntactic, control, and data dependency semantics simultaneously.\n\n### Compiling Solidity to Graphs\n\nOur pipeline performs the following steps:\n1. Parse Solidity code to generate the AST using `solidity-parser`.\n2. Extract control flow nodes (e.g., statements, checks) and build the CFG.\n3. Compute data dependencies to generate the DFG.\n4. **Fusing Nodes**: We map nodes from AST, CFG, and DFG sharing the same source location into a single fused node. We add custom edge types (e.g., `ast_edge`, `control_flow_edge`, `data_flow_edge`) connecting them.\n\n### Training & Batching\n\nWe utilized **PyTorch Geometric** and **Deep Graph Library (DGL)**. Because smart contracts can be very large, we utilized batch training with dynamic graph padding to fit multiple graphs into GPU memory.\n\n```python\n# Fusing distinct edge types into a heterogeneous graph\nfrom torch_geometric.data import HeteroData\n\ndata = HeteroData()\n# Add nodes\ndata['node'].x = node_features # Shape: [num_nodes, feature_dim]\n\n# Add AST, CFG, and DFG edges\ndata['node', 'ast_link', 'node'].edge_index = ast_edges\ndata['node', 'control_link', 'node'].edge_index = cfg_edges\ndata['node', 'data_link', 'node'].edge_index = dfg_edges\n```\n\n### Key Findings\n\nOur model was tested on datasets containing thousands of smart contracts (including reentrancy, integer overflow, and access control bugs). Fusing the three representations resulted in a **14% increase in recall** compared to models training on AST/CFG alone.\n\nFor more details on the implementation and research paper, visit [solidity-analyzer](https://github.com/SuZeAI/solidity-analyzer) and [GraphFusionVulDetect-Research](https://github.com/SuZeAI/GraphFusionVulDetect-Research)."
+    }
+  ]
+}
