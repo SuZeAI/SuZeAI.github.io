@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Sun, Moon, Mail, ShieldAlert } from 'lucide-react';
+import { Sun, Moon, Mail, ShieldAlert, Menu, X } from 'lucide-react';
 
 // Import Pages
 import About from './pages/About';
@@ -15,6 +15,9 @@ export default function App() {
   
   // Navigation State: 'about' | 'projects' | 'products' | 'academia' | 'blog'
   const [activeTab, setActiveTab] = useState('about');
+  
+  // Mobile Menu State
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   
   // Theme State
   const [theme, setTheme] = useState('light');
@@ -257,6 +260,7 @@ export default function App() {
   const navigateTo = (tab) => {
     window.location.hash = tab;
     setActiveTab(tab);
+    setIsMenuOpen(false);
   };
 
 
@@ -294,7 +298,7 @@ export default function App() {
       
       {/* HEADER NAVBAR */}
       <header className="sticky top-0 z-40 bg-[#f9fafb]/90 dark:bg-[#0f0f11]/90 backdrop-blur-md border-b border-gray-100 dark:border-gray-900/60 transition-colors">
-        <div className="max-w-4xl mx-auto px-6 h-16 flex items-center justify-between">
+        <div className="max-w-4xl mx-auto px-6 h-16 flex items-center justify-between relative">
           {/* Logo brand */}
           <button
             onClick={() => navigateTo('about')}
@@ -303,21 +307,25 @@ export default function App() {
             SUZEAI
           </button>
 
-          {/* Navigation Links */}
-          <nav className="flex items-center gap-1 sm:gap-2">
-            {['about', 'projects', 'products', 'academia', 'blog'].map((tab) => (
-              <button
-                key={tab}
-                onClick={() => navigateTo(tab)}
-                className={`px-2.5 py-1.5 text-xs font-extrabold tracking-wider rounded uppercase transition-colors ${
-                  activeTab === tab
-                    ? 'text-rose-600 dark:text-rose-400 font-black'
-                    : 'text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white'
-                }`}
-              >
-                {tab}
-              </button>
-            ))}
+          {/* Desktop & Mobile Actions */}
+          <div className="flex items-center gap-1 sm:gap-2">
+            {/* Desktop Navigation Links */}
+            <nav className="hidden md:flex items-center gap-1">
+              {['about', 'projects', 'products', 'academia', 'blog'].map((tab) => (
+                <button
+                  key={tab}
+                  onClick={() => navigateTo(tab)}
+                  className={`px-2.5 py-1.5 text-xs font-extrabold tracking-wider rounded uppercase transition-colors ${
+                    activeTab === tab
+                      ? 'text-rose-600 dark:text-rose-400 font-black'
+                      : 'text-gray-550 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white'
+                  }`}
+                >
+                  {tab}
+                </button>
+              ))}
+            </nav>
+
             {/* Dark Mode Switcher */}
             <button
               onClick={toggleTheme}
@@ -330,7 +338,39 @@ export default function App() {
                 <Sun className="w-4 h-4 shrink-0" />
               )}
             </button>
-          </nav>
+
+            {/* Mobile Menu Button */}
+            <button
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="p-1.5 text-gray-400 hover:text-gray-900 dark:hover:text-white rounded transition-colors md:hidden"
+              aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+            >
+              {isMenuOpen ? (
+                <X className="w-5 h-5 shrink-0" />
+              ) : (
+                <Menu className="w-5 h-5 shrink-0" />
+              )}
+            </button>
+          </div>
+
+          {/* Mobile Navigation Dropdown Drawer */}
+          {isMenuOpen && (
+            <div className="absolute top-16 left-0 right-0 bg-[#f9fafb]/95 dark:bg-[#0f0f11]/95 backdrop-blur-md border-b border-gray-100 dark:border-gray-900/60 p-4 flex flex-col gap-1.5 md:hidden shadow-lg animate-fade-in z-50">
+              {['about', 'projects', 'products', 'academia', 'blog'].map((tab) => (
+                <button
+                  key={tab}
+                  onClick={() => navigateTo(tab)}
+                  className={`px-4 py-2.5 text-left text-xs font-extrabold tracking-wider rounded uppercase transition-colors ${
+                    activeTab === tab
+                      ? 'bg-rose-50 dark:bg-rose-950/20 text-rose-600 dark:text-rose-455 font-black'
+                      : 'text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white hover:bg-gray-100/50 dark:hover:bg-gray-800/30'
+                  }`}
+                >
+                  {tab}
+                </button>
+              ))}
+            </div>
+          )}
         </div>
       </header>
 
