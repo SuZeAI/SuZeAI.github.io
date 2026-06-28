@@ -41,3 +41,119 @@
 .animate-fade-in {
   animation: fadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
+
+/* ----------------------------------------------------------------- */
+/* Syntax highlighting (highlight.js) — light + dark token palettes  */
+/* ----------------------------------------------------------------- */
+.hljs {
+  color: #24292e;
+  background: transparent;
+}
+.hljs-comment,
+.hljs-quote {
+  color: #6a737d;
+  font-style: italic;
+}
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-built_in,
+.hljs-meta .hljs-keyword {
+  color: #d73a49;
+}
+.hljs-string,
+.hljs-regexp,
+.hljs-attribute,
+.hljs-addition {
+  color: #032f62;
+}
+.hljs-title,
+.hljs-title.class_,
+.hljs-title.function_,
+.hljs-section,
+.hljs-name {
+  color: #6f42c1;
+}
+.hljs-number,
+.hljs-literal,
+.hljs-symbol,
+.hljs-bullet {
+  color: #005cc5;
+}
+.hljs-type,
+.hljs-class .hljs-title,
+.hljs-params,
+.hljs-variable,
+.hljs-template-variable {
+  color: #e36209;
+}
+.hljs-attr,
+.hljs-property {
+  color: #005cc5;
+}
+.hljs-meta,
+.hljs-doctag {
+  color: #6a737d;
+}
+.hljs-deletion {
+  color: #b31d28;
+  background: #ffeef0;
+}
+.hljs-emphasis {
+  font-style: italic;
+}
+.hljs-strong {
+  font-weight: 700;
+}
+
+/* Dark mode palette (One Dark inspired) */
+.dark .hljs {
+  color: #abb2bf;
+}
+.dark .hljs-comment,
+.dark .hljs-quote {
+  color: #7f848e;
+}
+.dark .hljs-keyword,
+.dark .hljs-selector-tag,
+.dark .hljs-built_in,
+.dark .hljs-meta .hljs-keyword {
+  color: #c678dd;
+}
+.dark .hljs-string,
+.dark .hljs-regexp,
+.dark .hljs-attribute,
+.dark .hljs-addition {
+  color: #98c379;
+}
+.dark .hljs-title,
+.dark .hljs-title.class_,
+.dark .hljs-title.function_,
+.dark .hljs-section,
+.dark .hljs-name {
+  color: #61afef;
+}
+.dark .hljs-number,
+.dark .hljs-literal,
+.dark .hljs-symbol,
+.dark .hljs-bullet {
+  color: #d19a66;
+}
+.dark .hljs-type,
+.dark .hljs-class .hljs-title,
+.dark .hljs-params,
+.dark .hljs-variable,
+.dark .hljs-template-variable {
+  color: #e06c75;
+}
+.dark .hljs-attr,
+.dark .hljs-property {
+  color: #d19a66;
+}
+.dark .hljs-meta,
+.dark .hljs-doctag {
+  color: #7f848e;
+}
+.dark .hljs-deletion {
+  color: #e06c75;
+  background: transparent;
+}

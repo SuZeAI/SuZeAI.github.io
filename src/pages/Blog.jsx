@@ -1,10 +1,36 @@
-import React, { useState, useMemo } from 'react';
-import { Search, Calendar, Clock, ArrowLeft, Share2 } from 'lucide-react';
+import React, { useState, useMemo, useEffect } from 'react';
+import { Search, Calendar, Clock, ArrowLeft, Share2, Check } from 'lucide-react';
 import MarkdownRenderer from '../components/MarkdownRenderer';
 
+// Read the blog post id (if any) from a "#blog/<post-id>" hash
+const getPostIdFromHash = () => {
+  const hash = window.location.hash.replace('#', '');
+  const [tab, ...rest] = hash.split('/');
+  if (tab.toLowerCase() !== 'blog') return null;
+  return rest.join('/') || null;
+};
+
 export default function Blog({ blogs }) {
-  const [selectedPostId, setSelectedPostId] = useState(null);
+  const [selectedPostId, setSelectedPostId] = useState(() => getPostIdFromHash());
   const [searchQuery, setSearchQuery] = useState('');
+  const [copied, setCopied] = useState(false);
+
+  // Keep the selected post in sync with the URL hash (deep-linking, back/forward)
+  useEffect(() => {
+    const syncFromHash = () => setSelectedPostId(getPostIdFromHash());
+    window.addEventListener('hashchange', syncFromHash);
+    return () => window.removeEventListener('hashchange', syncFromHash);
+  }, []);
+
+  const openPost = (id) => {
+    window.location.hash = `blog/${id}`;
+    setSelectedPostId(id);
+  };
+
+  const closePost = () => {
+    window.location.hash = 'blog';
+    setSelectedPostId(null);
+  };
 
   const activePost = useMemo(() => {
     if (!blogs) return null;
@@ -23,17 +49,33 @@ export default function Blog({ blogs }) {
     );
   }, [blogs, searchQuery]);
 
+  const copyToClipboard = async (url) => {
+    try {
+      await navigator.clipboard.writeText(url);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch (err) {
+      console.error('Failed to copy link:', err);
+    }
+  };
+
   const handleShare = (post) => {
+    // Build a direct, deep-linkable URL to this specific post
+    const { origin, pathname } = window.location;
+    const url = `${origin}${pathname}#blog/${post.id}`;
+
+    // Use the native share sheet when available (mobile), otherwise copy the link
     if (navigator.share) {
       navigator.share({
         title: post.title,
         text: post.snippet,
-        url: window.location.href,
-      }).catch(console.error);
+        url,
+      }).catch((err) => {
+        // User cancelling the share sheet is not an error worth surfacing
+        if (err?.name !== 'AbortError') copyToClipboard(url);
+      });
     } else {
-      // Fallback: copy to clipboard
-      navigator.clipboard.writeText(window.location.href);
-      alert('Link copied to clipboard!');
+      copyToClipboard(url);
     }
   };
 
@@ -43,7 +85,7 @@ export default function Blog({ blogs }) {
       <div className="space-y-6 max-w-2xl mx-auto animate-fade-in pb-12">
         {/* Back Button */}
         <button
-          onClick={() => setSelectedPostId(null)}
+          onClick={closePost}
           className="inline-flex items-center gap-2 text-sm font-bold text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors group"
         >
           <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
@@ -70,11 +112,24 @@ export default function Blog({ blogs }) {
             
             <button
               onClick={() => handleShare(activePost)}
-              className="inline-flex items-center gap-1.5 hover:text-rose-600 dark:hover:text-rose-400 transition-colors"
-              title="Share Article"
+              className={`inline-flex items-center gap-1.5 transition-colors ${
+                copied
+                  ? 'text-green-600 dark:text-green-400'
+                  : 'hover:text-rose-600 dark:hover:text-rose-400'
+              }`}
+              title="Copy link to this article"
             >
-              <Share2 className="w-3.5 h-3.5" />
-              <span>Share</span>
+              {copied ? (
+                <>
+                  <Check className="w-3.5 h-3.5" />
+                  <span>Copied!</span>
+                </>
+              ) : (
+                <>
+                  <Share2 className="w-3.5 h-3.5" />
+                  <span>Share</span>
+                </>
+              )}
             </button>
           </div>
         </div>
@@ -129,7 +184,7 @@ export default function Blog({ blogs }) {
           {filteredBlogs.map(post => (
             <div
               key={post.id}
-              onClick={() => setSelectedPostId(post.id)}
+              onClick={() => openPost(post.id)}
               className="group cursor-pointer space-y-2.5 p-4 -mx-4 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-900/40 transition-colors"
             >
               <div className="flex items-center gap-3 text-xs font-bold text-gray-400 dark:text-gray-500 uppercase tracking-wider">

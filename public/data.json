@@ -1320,6 +1320,20 @@
   },
   "blogs": [
     {
+      "id": "ai-collective-multi-agent-orchestration",
+      "title": "AI-Collective: Orchestrating Programmable AI Workforces with LangGraph",
+      "date": "2026-06-28",
+      "readTime": "7 min read",
+      "tags": [
+        "Multi-Agent",
+        "LangGraph",
+        "FastAPI",
+        "AI Orchestration"
+      ],
+      "snippet": "A behind-the-scenes look at AI-Collective — a multi-agent orchestration platform that lets you compose AI workforces using four topologies (Sequential, Ring, Mesh, Supervisor), 50+ skill toolkits, and real-time SSE streaming.",
+      "content": "### Introduction\n\nMost AI applications today are still single chatbots: one model, one context window, one turn at a time. But real-world work is rarely a monologue — it's a *team* of specialists collaborating toward a shared objective. **AI-Collective** is a source-available framework I built to model exactly that: an orchestration platform for composing **programmable AI workforces**, where each agent has specific skills, follows an organizational topology, and collaborates with the others under real-time, human-in-the-loop supervision.\n\nIn this article I'll walk through the core design decisions — the topology engine, the atomic skill system, and the streaming architecture.\n\n### Why Topologies Matter\n\nA flat \"swarm\" of agents quickly devolves into chaos: agents talk over each other, loop infinitely, or duplicate work. Instead of one rigid pattern, AI-Collective lets you select an orchestration **topology** at runtime via a single `mode` field. Each topology is implemented as a **LangGraph state machine**.\n\n```mermaid\ngraph TD\n    A[Task] --> C{Agent Graph Service}\n    C -->|sequential| D[Single Agent]\n    C -->|ring| E[Ring: Agent 0 to N to 0]\n    C -->|mesh| F[Hub connects to Spokes]\n    C -->|supervisor| G[Lead delegates to Workers]\n    D & E & F & G --> H[Agent Executor + Tool Bindings]\n    H --> I[50+ Skill Toolkits]\n    H --> J[Subagent Spawner]\n```\n\n- **Sequential** — a single agent processes the full request. Fastest and most predictable; the sensible default.\n- **Ring** — agents execute in a circle (`Agent 0 → Agent 1 → … → Agent N → Agent 0`), each seeing the full accumulated history. Ideal for iterative refinement and debate, bounded by `max_rounds`.\n- **Mesh** — a **hub agent** connects bidirectionally to N **spoke** specialists and decides which to activate next using control blocks like `<NEXT_AGENT>` and `<DISCUSSION_END>`.\n- **Supervisor** — a **lead agent** delegates to workers via `<DELEGATE_TO>WorkerName</DELEGATE_TO>`, synthesizes their reports, and either delegates again or emits a `<FINAL_ANSWER>`. This is the classic manager–worker hierarchy.\n\n### Control Blocks: Steering the Graph with Text\n\nThe interesting trick is that routing decisions are encoded as **structured control blocks** inside the model's own output. Rather than forcing a separate function call on every turn, the orchestrator parses the agent's response for tokens like `<DELEGATE_TO>`, which keeps the LLM in a natural reasoning flow while still giving the state machine deterministic transitions to act on.\n\n### The Atomic Skill System\n\nAgents are only as useful as the tools they can reach. AI-Collective ships **50+ built-in toolkits** — Google Workspace, web search, messaging platforms, browser automation, and more — and lets you bind granular capabilities to any individual agent.\n\n```python\nagent = Agent(\n    name=\"Researcher\",\n    role=\"Finds and summarizes primary sources\",\n    skills=[\"web_search\", \"browser_automation\", \"google_docs\"],\n    max_subagents=3,   # can spawn parallel workers\n    token_budget=8000, # per-turn context cap\n)\n```\n\nEach agent can also **spawn parallel subagents** for concurrent task delegation, with configurable concurrency and turn limits — so a single \"Researcher\" can fan out across ten sources at once and then reduce the results.\n\n### Real-time SSE Streaming\n\nMulti-agent runs can take minutes, and a blank loading spinner is unacceptable UX. The backend streams **turn-by-turn events** over Server-Sent Events, surfacing intermediate state so the frontend can render the team thinking live:\n\n```text\nevent: agent_start          { \"agent\": \"Supervisor\" }\nevent: llm_request_start    { \"agent\": \"Supervisor\" }\nevent: subagent_complete    { \"agent\": \"Researcher\", \"tokens\": 1820 }\nevent: agent_message        { \"agent\": \"Writer\", \"delta\": \"...\" }\nevent: discussion_end       { \"final\": true }\n```\n\nThis event stream also feeds the **activity feed and analytics dashboard**, giving per-agent productivity and team-efficiency metrics.\n\n### Clean Architecture Under the Hood\n\nThe backend follows strict **Clean Architecture** with fully asynchronous execution:\n\n- **Frontend** — React 18 + TypeScript + Vite + Tailwind + Framer Motion\n- **Backend** — FastAPI (Python 3.11+), layered Domain → Application → Infrastructure → API\n- **Orchestration** — LangGraph state machines across the four topology modes\n- **Storage** — JSON (zero-setup default) or MongoDB via the async Motor driver\n- **Scaling** — in-memory `ThreadPoolExecutor` by default, swappable to RabbitMQ + Redis locks for distributed deployments\n- **Multi-LLM** — provider-agnostic: Gemini, OpenAI, Anthropic Claude, or OpenRouter, swappable at runtime\n\nEverything degrades gracefully: you can run the entire stack with zero external services (JSON storage, threading queue) and incrementally add MongoDB, RabbitMQ, and Redis only when you need horizontal scale.\n\n### Knowledge-Graph Memory\n\nLong agent conversations blow past any context window. AI-Collective extracts a **knowledge graph** from the running discussion — either statically via spaCy or semantically via an LLM — so agents can recall earlier entities and relationships without re-reading the entire transcript on every turn. Paired with automatic **token-budget management**, this keeps long-horizon runs both coherent and affordable.\n\n### Closing Thoughts\n\nThe biggest lesson from building AI-Collective is that **structure beats scale**. A handful of focused agents wired into the right topology consistently outperforms a single giant prompt trying to do everything. By making topology, skills, and memory first-class, swappable primitives, the framework turns \"prompt an LLM\" into \"design an organization.\"\n\nAI-Collective is source-available for educational and research use. It's an actively evolving project — the orchestration engine, skill toolkits, and analytics layer are all areas I'm continuing to push forward."
+    },
+    {
       "id": "building-slidegen",
       "title": "Building SlideGen: Reimagining Slides with Gemini and VLMs",
       "date": "2026-06-10",
@@ -1387,6 +1401,662 @@
       ],
       "snippet": "A deep dive into our published research on fusing AST, CFG, and DFG representations of Solidity code into unified graph models for smart contract auditing.",
       "content": "### Introduction\n\nDecentralized Finance (DeFi) has revolutionized the financial sector, but it has also attracted malicious actors. Vulnerabilities in smart contracts have led to billions of dollars in losses. Static analysis tools like Slither or Mythril exist, but they suffer from high false-positive rates.\n\nIn our paper published in **ICT Express (Q1 Journal)**, we proposed **GraphFusionVulDetect**, a framework that fuses multiple program representations into a unified graph to detect contract vulnerabilities using deep learning.\n\n### The Graph Fusion Architecture\n\nMost vulnerability detection tools convert source code into a single graph representation. However, each representation highlights a different aspect of the program:\n- **Abstract Syntax Tree (AST)**: Captures hierarchical structure and nesting.\n- **Control Flow Graph (CFG)**: Captures execution order and branching logic.\n- **Data Flow Graph (DFG)**: Tracks variable dependencies and data mutations.\n\n```mermaid\ngraph TD\n    AST[AST: Syntax Structure] --> GF[Graph Fusion Engine]\n    CFG[CFG: Execution Flow] --> GF\n    DFG[DFG: Data Mutations] --> GF\n    GF --> GNN[Unified GNN Model]\n    GNN --> Pred[Vulnerability Prediction]\n```\n\nBy fusing AST, CFG, and DFG, our model retains syntactic, control, and data dependency semantics simultaneously.\n\n### Compiling Solidity to Graphs\n\nOur pipeline performs the following steps:\n1. Parse Solidity code to generate the AST using `solidity-parser`.\n2. Extract control flow nodes (e.g., statements, checks) and build the CFG.\n3. Compute data dependencies to generate the DFG.\n4. **Fusing Nodes**: We map nodes from AST, CFG, and DFG sharing the same source location into a single fused node. We add custom edge types (e.g., `ast_edge`, `control_flow_edge`, `data_flow_edge`) connecting them.\n\n### Training & Batching\n\nWe utilized **PyTorch Geometric** and **Deep Graph Library (DGL)**. Because smart contracts can be very large, we utilized batch training with dynamic graph padding to fit multiple graphs into GPU memory.\n\n```python\n# Fusing distinct edge types into a heterogeneous graph\nfrom torch_geometric.data import HeteroData\n\ndata = HeteroData()\n# Add nodes\ndata['node'].x = node_features # Shape: [num_nodes, feature_dim]\n\n# Add AST, CFG, and DFG edges\ndata['node', 'ast_link', 'node'].edge_index = ast_edges\ndata['node', 'control_link', 'node'].edge_index = cfg_edges\ndata['node', 'data_link', 'node'].edge_index = dfg_edges\n```\n\n### Key Findings\n\nOur model was tested on datasets containing thousands of smart contracts (including reentrancy, integer overflow, and access control bugs). Fusing the three representations resulted in a **14% increase in recall** compared to models training on AST/CFG alone.\n\nFor more details on the implementation and research paper, visit [solidity-analyzer](https://github.com/SuZeAI/solidity-analyzer) and [GraphFusionVulDetect-Research](https://github.com/SuZeAI/GraphFusionVulDetect-Research)."
+    }
+  ],
+  "privateProjects": [
+    {
+      "id": "ai-collective",
+      "name": "AI-Collective",
+      "category": "AI Agents & Orchestration",
+      "description": "High-performance multi-agent orchestration platform for building programmable AI workforces. Supports 4 agent topologies (Sequential, Ring, Mesh, Supervisor) with 50+ built-in skill toolkits, real-time SSE streaming, knowledge-graph memory and multi-LLM support.",
+      "tech": [
+        "React",
+        "TypeScript",
+        "Vite",
+        "FastAPI",
+        "LangGraph",
+        "MongoDB",
+        "Redis",
+        "RabbitMQ"
+      ],
+      "status": "Private"
+    },
+    {
+      "id": "ai-team-builder",
+      "name": "AI Team Builder",
+      "category": "AI Agents & Orchestration",
+      "description": "Web app for managing and tracking AI agent teams — dashboard, agent/task lists, analytics and system configuration, with Recharts visualizations.",
+      "tech": [
+        "React",
+        "TypeScript",
+        "Vite",
+        "React Query",
+        "Tailwind CSS",
+        "shadcn/ui",
+        "Recharts"
+      ],
+      "status": "Private"
+    },
+    {
+      "id": "langgraph-worker",
+      "name": "LangGraph Worker",
+      "category": "AI Agents & Orchestration",
+      "description": "LangGraph-based worker/agent runtime for orchestrating long-running graph workflows and tool calls.",
+      "tech": [
+        "Python",
+        "LangGraph"
+      ],
+      "status": "Private"
+    },
+    {
+      "id": "webcopilot",
+      "name": "WebCopilot",
+      "category": "AI Agents & Orchestration",
+      "description": "AI copilot application with frontend and backend components for web integration and in-app assistance.",
+      "tech": [
+        "Python",
+        "React",
+        "LLM"
+      ],
+      "status": "Private"
+    },
+    {
+      "id": "agent-demo-web",
+      "name": "Agent Demo Web",
+      "category": "AI Agents & Orchestration",
+      "description": "Web demo showcasing agent capabilities — tool use, planning and interactive chat over a browser UI.",
+      "tech": [
+        "JavaScript",
+        "Agent Framework",
+        "LLM"
+      ],
+      "status": "Private"
+    },
+    {
+      "id": "llmunsloth",
+      "name": "LLMUnsloth",
+      "category": "LLM Training & Fine-Tuning",
+      "description": "Training framework for SFT and DPO using the Unsloth library. Supports Llama3, Gemma, Mistral and Phi base models with flexible YAML-based configuration.",
+      "tech": [
+        "Python",
+        "Unsloth",
+        "Transformers",
+        "DPO",
+        "Wandb",
+        "CUDA"
+      ],
+      "status": "Private"
+    },
+    {
+      "id": "chatbot-unsloth",
+      "name": "ChatBot Unsloth",
+      "category": "LLM Training & Fine-Tuning",
+      "description": "Chatbot leveraging Unsloth-optimized LLM fine-tuning for efficient training and deployment.",
+      "tech": [
+        "Python",
+        "Unsloth",
+        "LLM"
+      ],
+      "status": "Private"
+    },
+    {
+      "id": "tinymodel",
+      "name": "TinyModel",
+      "category": "LLM Training & Fine-Tuning",
+      "description": "Small language model experiments — scratch-built and Unsloth-optimized variants over Llama3, Mistral, Phi and Gemma, with training, evaluation and demo pipelines.",
+      "tech": [
+        "Python",
+        "Unsloth",
+        "PyTorch"
+      ],
+      "status": "Private"
+    },
+    {
+      "id": "finetuning",
+      "name": "FineTuning",
+      "category": "LLM Training & Fine-Tuning",
+      "description": "Custom LLM fine-tuning project with YAML configuration for training parameters and dataset management.",
+      "tech": [
+        "Python",
+        "PyTorch",
+        "Transformers"
+      ],
+      "status": "Private"
+    },
+    {
+      "id": "rag",
+      "name": "RAG Pipeline",
+      "category": "LLM Training & Fine-Tuning",
+      "description": "Retrieval-Augmented Generation pipeline integrating external knowledge sources into the generation loop — knowledge retrieval, contextual generation and customizable pipelines over a vector store.",
+      "tech": [
+        "Python",
+        "LLM",
+        "Vector DB",
+        "Embeddings"
+      ],
+      "status": "Private"
+    },
+    {
+      "id": "deploy-whisper",
+      "name": "Deploy Whisper",
+      "category": "LLM Training & Fine-Tuning",
+      "description": "Deployment utilities for OpenAI Whisper speech-to-text — packaging and serving the model for production inference.",
+      "tech": [
+        "Python",
+        "Whisper",
+        "ASR"
+      ],
+      "status": "Private"
+    },
+    {
+      "id": "yolov",
+      "name": "Yolov",
+      "category": "Computer Vision",
+      "description": "Comprehensive YOLO object-detection study spanning YOLOv1 through YOLOv13, tracking the evolution of architectures with real-time detection and state-of-the-art COCO performance.",
+      "tech": [
+        "Python",
+        "PyTorch",
+        "Ultralytics",
+        "Object Detection"
+      ],
+      "status": "Private"
+    },
+    {
+      "id": "vqa",
+      "name": "Visual Question Answering",
+      "category": "Computer Vision",
+      "description": "Multi-modal system that answers questions about images, combining image encoders (CNN/ViT), question encoders (RNN/LSTM/Transformer) and attention-based fusion.",
+      "tech": [
+        "Python",
+        "PyTorch",
+        "Transformers",
+        "CNN",
+        "Attention"
+      ],
+      "status": "Private"
+    },
+    {
+      "id": "colorizeimage",
+      "name": "ColorizeImage",
+      "category": "Computer Vision",
+      "description": "Deep-learning automatic image colorization with a frontend and testing components.",
+      "tech": [
+        "Python",
+        "Deep Learning",
+        "CNN"
+      ],
+      "status": "Private"
+    },
+    {
+      "id": "sudoku-solver",
+      "name": "Sudoku Solver",
+      "category": "Computer Vision",
+      "description": "Computer-vision Sudoku solver with live and image-based modes — CNN digit recognition, Hough-transform grid detection and a KivyMD mobile app with real-time performance.",
+      "tech": [
+        "Python",
+        "OpenCV",
+        "TensorFlow",
+        "KivyMD",
+        "NumPy"
+      ],
+      "status": "Private"
+    },
+    {
+      "id": "classification-dog-breed",
+      "name": "Dog Breed Classification",
+      "category": "Computer Vision",
+      "description": "Fine-grained dog-breed classification using a DenseNet architecture, with Jupyter notebooks for experimentation and training.",
+      "tech": [
+        "Python",
+        "DenseNet",
+        "PyTorch",
+        "Jupyter"
+      ],
+      "status": "Private"
+    },
+    {
+      "id": "classification-dog-cat",
+      "name": "Dog vs Cat Classification",
+      "category": "Computer Vision",
+      "description": "Image classification distinguishing dogs from cats with convolutional neural networks.",
+      "tech": [
+        "Python",
+        "CNN",
+        "TensorFlow"
+      ],
+      "status": "Private"
+    },
+    {
+      "id": "gcn-computervision",
+      "name": "GCN ComputerVision",
+      "category": "Computer Vision",
+      "description": "Applying Graph Convolutional Networks to computer-vision tasks by modelling images/regions as graphs.",
+      "tech": [
+        "Python",
+        "GNN",
+        "PyTorch"
+      ],
+      "status": "Private"
+    },
+    {
+      "id": "retrieve-images-fruits",
+      "name": "Retrieve Images Fruits",
+      "category": "Computer Vision",
+      "description": "Data-collection utility that retrieves fruit images from online sources across categories, with customizable downloads and organized output for ML datasets.",
+      "tech": [
+        "Python",
+        "requests",
+        "BeautifulSoup4",
+        "Pillow"
+      ],
+      "status": "Private"
+    },
+    {
+      "id": "image-retrieval-system",
+      "name": "Image Retrieval System",
+      "category": "Computer Vision",
+      "description": "Similarity-based image retrieval and ranking over learned embeddings.",
+      "tech": [
+        "Python",
+        "Deep Learning",
+        "Embeddings"
+      ],
+      "status": "Private"
+    },
+    {
+      "id": "ocr-tabular-text",
+      "name": "OCR Tabular Text",
+      "category": "Computer Vision",
+      "description": "OCR system that extracts structured data from table images, recovering rows and columns from scanned documents.",
+      "tech": [
+        "Python",
+        "OCR",
+        "OpenCV"
+      ],
+      "status": "Private"
+    },
+    {
+      "id": "mamba-classification-comment",
+      "name": "Mamba Classification Comment",
+      "category": "NLP & Text",
+      "description": "Text classification with the Mamba state-space model, classifying IMDB movie reviews and demonstrating SSM as an alternative to Transformers for sequence modelling.",
+      "tech": [
+        "Python",
+        "Mamba",
+        "SSM",
+        "PyTorch"
+      ],
+      "status": "Private"
+    },
+    {
+      "id": "ner-paragraph",
+      "name": "NER Paragraph",
+      "category": "NLP & Text",
+      "description": "Named-Entity-Recognition system for extracting entities from free-form paragraphs.",
+      "tech": [
+        "Python",
+        "Transformers",
+        "NER"
+      ],
+      "status": "Private"
+    },
+    {
+      "id": "text-normalization",
+      "name": "Text Normalization",
+      "category": "NLP & Text",
+      "description": "Text preprocessing and normalization pipeline for downstream NLP and TTS tasks.",
+      "tech": [
+        "Python",
+        "NLP"
+      ],
+      "status": "Private"
+    },
+    {
+      "id": "translate",
+      "name": "Translate",
+      "category": "NLP & Text",
+      "description": "Machine-translation services and utilities wrapping translation models/APIs.",
+      "tech": [
+        "Python",
+        "NLP",
+        "Translation"
+      ],
+      "status": "Private"
+    },
+    {
+      "id": "national-dictionary",
+      "name": "National Dictionary",
+      "category": "NLP & Text",
+      "description": "Dictionary/lexicon management system for language-processing and lookup workflows.",
+      "tech": [
+        "Python",
+        "NLP"
+      ],
+      "status": "Private"
+    },
+    {
+      "id": "nlp-viettel",
+      "name": "NLP Viettel",
+      "category": "NLP & Text",
+      "description": "Vietnamese NLP competition project built for the Viettel contest.",
+      "tech": [
+        "Python",
+        "NLP",
+        "Vietnamese"
+      ],
+      "status": "Private"
+    },
+    {
+      "id": "graphfusionvuldetect",
+      "name": "GraphFusionVulDetect",
+      "category": "Security & Code Analysis",
+      "description": "Smart-contract vulnerability detection pipeline using CodeBERT embeddings and Graph Neural Networks — builds function call graphs and classifies function-level flaws (Re-Entrancy, Timestamp Dependency, etc.).",
+      "tech": [
+        "Python",
+        "PyTorch",
+        "DGL",
+        "CodeBERT",
+        "Slither",
+        "GNN"
+      ],
+      "status": "Private"
+    },
+    {
+      "id": "vul-detect",
+      "name": "Vul Detect",
+      "category": "Security & Code Analysis",
+      "description": "Source-code vulnerability detection system using machine-learning models over code representations.",
+      "tech": [
+        "Python",
+        "Machine Learning",
+        "Security"
+      ],
+      "status": "Private"
+    },
+    {
+      "id": "gnn-posthoc-method",
+      "name": "GNN Post-hoc Method",
+      "category": "Security & Code Analysis",
+      "description": "Post-hoc explanation and interpretation methods for Graph Neural Network predictions.",
+      "tech": [
+        "Python",
+        "PyTorch",
+        "DGL",
+        "Explainability"
+      ],
+      "status": "Private"
+    },
+    {
+      "id": "graph-reduce-contrastive",
+      "name": "Graph Reduce Contrastive",
+      "category": "Security & Code Analysis",
+      "description": "Contrastive-learning methods for graph reduction and representation optimization in GNN pipelines.",
+      "tech": [
+        "Python",
+        "PyTorch",
+        "Contrastive Learning",
+        "GNN"
+      ],
+      "status": "Private"
+    },
+    {
+      "id": "android-malware-detection-2023",
+      "name": "Android Malware Detection",
+      "category": "Security & Code Analysis",
+      "description": "ML-based malware detection for Android applications with a documented methodology over app features and call graphs.",
+      "tech": [
+        "Python",
+        "Machine Learning",
+        "Android",
+        "Security"
+      ],
+      "status": "Private"
+    },
+    {
+      "id": "encrypted",
+      "name": "Encrypted",
+      "category": "Security & Code Analysis",
+      "description": "Encryption and cryptography utilities for securing data at rest and in transit.",
+      "tech": [
+        "Python",
+        "Cryptography"
+      ],
+      "status": "Private"
+    },
+    {
+      "id": "scan-wifi",
+      "name": "Scan Wifi",
+      "category": "Security & Code Analysis",
+      "description": "WiFi scanning and network-analysis tool for surveying nearby access points and signal data.",
+      "tech": [
+        "Python",
+        "Networking"
+      ],
+      "status": "Private"
+    },
+    {
+      "id": "genslide",
+      "name": "GenSlide",
+      "category": "Content Generation",
+      "description": "Automated slide-generation pipeline that turns documents into summarized HTML slides — document chunking, LLM summarization and a Vision-LLM loop for iterative visual quality review.",
+      "tech": [
+        "Python",
+        "LLM",
+        "Vision LLM",
+        "Function Calling"
+      ],
+      "status": "Private"
+    },
+    {
+      "id": "slidegen-studio",
+      "name": "SlideGen Studio",
+      "category": "Content Generation",
+      "description": "Studio/IDE for slide generation and presentation creation on top of the SlideGen pipeline.",
+      "tech": [
+        "React",
+        "TypeScript",
+        "Vite"
+      ],
+      "status": "Private"
+    },
+    {
+      "id": "suno-music",
+      "name": "Suno Music",
+      "category": "Content Generation",
+      "description": "Music-generation experiments using Suno-style music AI APIs to produce tracks from prompts.",
+      "tech": [
+        "Python",
+        "Music AI",
+        "API"
+      ],
+      "status": "Private"
+    },
+    {
+      "id": "home-harmony-ai",
+      "name": "Home Harmony AI",
+      "category": "Web & Full-Stack Apps",
+      "description": "Smart-home dashboard simulating autonomous AI management of the house — room control, device management, AI decision feeds, camera monitoring, automation rules and energy tracking.",
+      "tech": [
+        "React",
+        "Tailwind CSS",
+        "Framer Motion",
+        "Recharts"
+      ],
+      "status": "Private"
+    },
+    {
+      "id": "campus-connect-trust",
+      "name": "Campus Connect Trust",
+      "category": "Web & Full-Stack Apps",
+      "description": "Full-stack campus web application built on TanStack Start with advanced routing, form handling and a modern component library.",
+      "tech": [
+        "React",
+        "TypeScript",
+        "TanStack Start",
+        "TanStack Router",
+        "Radix UI"
+      ],
+      "status": "Private"
+    },
+    {
+      "id": "style-advisor-ai",
+      "name": "Style Advisor AI",
+      "category": "Web & Full-Stack Apps",
+      "description": "AI-powered style/fashion recommendation app built on TanStack Start with a polished animated UI.",
+      "tech": [
+        "React",
+        "TypeScript",
+        "TanStack Start",
+        "Vite",
+        "Framer Motion"
+      ],
+      "status": "Private"
+    },
+    {
+      "id": "recommend-jobs",
+      "name": "Recommend Jobs",
+      "category": "Web & Full-Stack Apps",
+      "description": "Job-recommendation web app with personalized suggestions, user profiles, authentication and dark/light themes, backed by Firebase.",
+      "tech": [
+        "React",
+        "Material-UI",
+        "Firebase",
+        "React Router"
+      ],
+      "status": "Private"
+    },
+    {
+      "id": "exam-system",
+      "name": "Exam System",
+      "category": "Web & Full-Stack Apps",
+      "description": "Full-stack exam-management system with separate backend and frontend services, containerized and orchestrated with Docker Compose.",
+      "tech": [
+        "Docker",
+        "Docker Compose",
+        "React",
+        "Backend API"
+      ],
+      "status": "Private"
+    },
+    {
+      "id": "neolearn",
+      "name": "NeoLearn",
+      "category": "Web & Full-Stack Apps",
+      "description": "Educational/learning platform with LLM-assisted content and a modern web frontend.",
+      "tech": [
+        "React",
+        "LLM",
+        "Web"
+      ],
+      "status": "Private"
+    },
+    {
+      "id": "tutoring-center",
+      "name": "Tutoring Center",
+      "category": "Web & Full-Stack Apps",
+      "description": "Web application for managing tutoring and educational services — classes, students and scheduling.",
+      "tech": [
+        "Web",
+        "Backend"
+      ],
+      "status": "Private"
+    },
+    {
+      "id": "monitor-heart",
+      "name": "Monitor Heart",
+      "category": "Web & Full-Stack Apps",
+      "description": "Heart-rate / health-monitoring system that ingests sensor data and surfaces vitals on a dashboard.",
+      "tech": [
+        "Python",
+        "IoT",
+        "Monitoring"
+      ],
+      "status": "Private"
+    },
+    {
+      "id": "flappy-bird-ai",
+      "name": "Flappy Bird AI",
+      "category": "Game AI",
+      "description": "AI-controlled Flappy Bird trained with NEAT (NeuroEvolution of Augmenting Topologies) and genetic algorithms over neural-network controllers.",
+      "tech": [
+        "Python",
+        "NEAT-Python",
+        "Genetic Algorithms",
+        "Pygame"
+      ],
+      "status": "Private"
+    },
+    {
+      "id": "ai-tetris-2024",
+      "name": "AI Tetris 2024",
+      "category": "Game AI",
+      "description": "AI-powered Tetris that learns to place pieces and clear lines using search and reinforcement-learning heuristics.",
+      "tech": [
+        "Python",
+        "RL",
+        "Game"
+      ],
+      "status": "Private"
+    },
+    {
+      "id": "ballsortai",
+      "name": "Ball Sort AI",
+      "category": "Game AI",
+      "description": "Ball-sort puzzle solver implementing a search algorithm to find valid move sequences.",
+      "tech": [
+        "Python",
+        "Algorithms",
+        "Search"
+      ],
+      "status": "Private"
+    },
+    {
+      "id": "tetrisbattle",
+      "name": "Tetris Battle",
+      "category": "Game AI",
+      "description": "Tetris battle game with AI agent components for competitive multi-player play.",
+      "tech": [
+        "Python",
+        "RL",
+        "Game"
+      ],
+      "status": "Private"
+    },
+    {
+      "id": "n8n-custom-service",
+      "name": "n8n Custom Service",
+      "category": "Tools & Automation",
+      "description": "Custom workflow-automation nodes/services built on the n8n workflow engine.",
+      "tech": [
+        "n8n",
+        "Node.js",
+        "JavaScript",
+        "Automation"
+      ],
+      "status": "Private"
+    },
+    {
+      "id": "tool-tiktok",
+      "name": "Tool TikTok",
+      "category": "Tools & Automation",
+      "description": "TikTok integration and automation tooling for content workflows over the platform APIs.",
+      "tech": [
+        "Python",
+        "API",
+        "Automation"
+      ],
+      "status": "Private"
+    },
+    {
+      "id": "my-utils",
+      "name": "My Utils",
+      "category": "Tools & Automation",
+      "description": "Personal collection of utility functions, code snippets and best-practice examples across domains, with documentation.",
+      "tech": [
+        "Python",
+        "Utilities"
+      ],
+      "status": "Private"
     }
   ]
 }

@@ -7,13 +7,14 @@ import Projects from './pages/Projects';
 import Products from './pages/Products';
 import Academia from './pages/Academia';
 import Blog from './pages/Blog';
+import PrivateProjects from './pages/PrivateProjects';
 
 export default function App() {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   
-  // Navigation State: 'about' | 'projects' | 'products' | 'academia' | 'blog'
+  // Navigation State: 'about' | 'projects' | 'products' | 'academia' | 'blog' | 'lab'
   const [activeTab, setActiveTab] = useState('about');
   
   // Mobile Menu State
@@ -39,9 +40,11 @@ export default function App() {
     // 2. Hash routing initialization
     const handleHashChange = () => {
       const hash = window.location.hash.replace('#', '').toLowerCase();
-      const validTabs = ['about', 'projects', 'products', 'academia', 'blog'];
-      if (validTabs.includes(hash)) {
-        setActiveTab(hash);
+      // Support sub-paths like "blog/<post-id>" — the tab is the first segment
+      const tab = hash.split('/')[0];
+      const validTabs = ['about', 'projects', 'products', 'academia', 'blog', 'lab'];
+      if (validTabs.includes(tab)) {
+        setActiveTab(tab);
       } else {
         setActiveTab('about');
       }
@@ -311,7 +314,7 @@ export default function App() {
           <div className="flex items-center gap-1 sm:gap-2">
             {/* Desktop Navigation Links */}
             <nav className="hidden md:flex items-center gap-1">
-              {['about', 'projects', 'products', 'academia', 'blog'].map((tab) => (
+              {['about', 'projects', 'products', 'academia', 'blog', 'lab'].map((tab) => (
                 <button
                   key={tab}
                   onClick={() => navigateTo(tab)}
@@ -356,7 +359,7 @@ export default function App() {
           {/* Mobile Navigation Dropdown Drawer */}
           {isMenuOpen && (
             <div className="absolute top-16 left-0 right-0 bg-[#f9fafb]/95 dark:bg-[#0f0f11]/95 backdrop-blur-md border-b border-gray-100 dark:border-gray-900/60 p-4 flex flex-col gap-1.5 md:hidden shadow-lg animate-fade-in z-50">
-              {['about', 'projects', 'products', 'academia', 'blog'].map((tab) => (
+              {['about', 'projects', 'products', 'academia', 'blog', 'lab'].map((tab) => (
                 <button
                   key={tab}
                   onClick={() => navigateTo(tab)}
@@ -397,6 +400,7 @@ export default function App() {
         {activeTab === 'products' && <Products products={data.products} />}
         {activeTab === 'academia' && <Academia academia={data.academia} />}
         {activeTab === 'blog' && <Blog blogs={data.blogs} />}
+        {activeTab === 'lab' && <PrivateProjects privateProjects={data.privateProjects} />}
       </main>
 
       {/* FOOTER */}
