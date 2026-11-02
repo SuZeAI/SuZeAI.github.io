@@ -70,6 +70,7 @@ export default function Products({ products }) {
 
                 <a
                   href={product.url}
+                  {...(product.url?.startsWith('http') && { target: '_blank', rel: 'noopener noreferrer' })}
                   className="px-5 py-2.5 bg-gray-900 text-white dark:bg-white dark:text-gray-900 hover:bg-gray-850 dark:hover:bg-gray-105 font-bold text-sm rounded-lg transition-colors flex items-center gap-2 group/btn shadow-sm"
                 >
                   <ShoppingCart className="w-4 h-4 shrink-0" />
