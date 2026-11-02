@@ -37,7 +37,7 @@
       "role": "AI Research Engineer",
       "company": "FPT Corporation",
       "period": "March 2026 - Present",
-      "description": "• Researching and deploying state-of-the-art Large Language Model (LLM) agents, building multi-agent frameworks, and architecting scalable enterprise AI systems."
+      "description": "• Researching and deploying state-of-the-art Large Language Model (LLM) agents, building multi-agent frameworks, and architecting scalable enterprise AI systems.\n• Co-leading a team on a large-scale product alongside a senior engineer, owning the core components."
     },
     {
       "role": "Academic Advisor",
@@ -55,7 +55,7 @@
       "role": "AI Assistant",
       "company": "PTIT IEC Lab & Naver Lab",
       "period": "September 2023 - Present",
-      "description": "• Malware Detection in Android Applications: Co-led a project leveraging Graph Neural Networks (GNNs) with fine-tuned Word2Vec embeddings to model function names in call graphs; exploited shared naming conventions in malware and achieved 98.8% F1-score.\n• Graph Fusion Detection in Smart Contracts: Researched vulnerabilities in smart contracts with a focus on error classification; developed graph-based models using batch training to capture feature interactions. Paper published in ICT Express (Q1-ranked conference).\n• Utilization of Advanced Frameworks: Applied PyTorch, Torch Geometric, Deep Graph Library (DGL), Google Colab, and Kaggle for model training, evaluation, and analysis.\n• Other Experiences: Participation in Knowledge Seminars, NLP Knowledge (CS224N, CS224U); Support for GCN-Computer Vision Project."
+      "description": "• Malware Detection in Android Applications: Co-led a project leveraging Graph Neural Networks (GNNs) with fine-tuned Word2Vec embeddings to model function names in call graphs; exploited shared naming conventions in malware and achieved 98.8% F1-score.\n• Graph Fusion Detection in Smart Contracts: Researched vulnerabilities in smart contracts with a focus on error classification; developed graph-based models using batch training to capture feature interactions. Paper published in ICT Express (Q1 journal).\n• Utilization of Advanced Frameworks: Applied PyTorch, Torch Geometric, Deep Graph Library (DGL), Google Colab, and Kaggle for model training, evaluation, and analysis.\n• Other Experiences: Participation in Knowledge Seminars, NLP Knowledge (CS224N, CS224U); Support for GCN-Computer Vision Project."
     },
     {
       "role": "AI Research Engineer",
@@ -65,6 +65,12 @@
     }
   ],
   "academia": [
+    {
+      "degree": "Master's Program - Posts and Telecommunications Institute of Technology",
+      "school": "PTIT, Hanoi",
+      "period": "2026 - Present",
+      "details": "Graduate study alongside full-time work at FPT, with research focused on efficient long-context inference for LLMs and agents."
+    },
     {
       "degree": "Academic Advisor",
       "school": "PAYT - CLB Trí tuệ nhân tạo PTIT",
@@ -81,7 +87,7 @@
       "degree": "AI Assistant",
       "school": "PTIT IEC Lab & Naver Lab",
       "period": "September 2023 - Present",
-      "details": "○ Malware Detection in Android Applications: Co-led a project leveraging Graph Neural Networks (GNNs) with fine-tuned Word2Vec embeddings to model function names in call graphs; exploited shared naming conventions in malware and achieved 98.8% F1-score. ([GitHub](https://github.com/SuZeAI/Detect_Androi_Malware))\n○ Graph Fusion Detection in Smart Contracts: Researched vulnerabilities in smart contracts with a focus on error classification; developed graph-based models using batch training to capture feature interactions. Paper currently under review at a Q1 Journal ICT express. ([GitHub](https://github.com/SuZeAI/GraphFusionVulDetect-Research))\n○ Utilization of Advanced Frameworks: Applied PyTorch, Torch Geometric, Deep Graph Library (DGL), Google Colab, and Kaggle for model training, evaluation, and analysis.\n○ Other Experiences: Participation in Knowledge Seminars, NLP Knowledge (CS224N, CS224U); Support for GCN-Computer Vision Project.",
+      "details": "○ Malware Detection in Android Applications: Co-led a project leveraging Graph Neural Networks (GNNs) with fine-tuned Word2Vec embeddings to model function names in call graphs; exploited shared naming conventions in malware and achieved 98.8% F1-score. ([GitHub](https://github.com/SuZeAI/Detect_Androi_Malware))\n○ Graph Fusion Detection in Smart Contracts: Researched vulnerabilities in smart contracts with a focus on error classification; developed graph-based models using batch training to capture feature interactions. Paper published in ICT Express (Q1 journal). ([GitHub](https://github.com/SuZeAI/GraphFusionVulDetect-Research))\n○ Utilization of Advanced Frameworks: Applied PyTorch, Torch Geometric, Deep Graph Library (DGL), Google Colab, and Kaggle for model training, evaluation, and analysis.\n○ Other Experiences: Participation in Knowledge Seminars, NLP Knowledge (CS224N, CS224U); Support for GCN-Computer Vision Project.",
       "focusAreas": [
         "Malware Detection (GNNs)",
         "Smart Contract Security",
@@ -1182,6 +1188,48 @@
   ],
   "products": [
     {
+      "id": "ai-collective",
+      "name": "AI – Collective",
+      "description": "Create and run AI-powered companies of any kind. Describe a company in chat and the platform proposes departments, staff and skills; staff collaborate in six topologies (Sequential, Ring, Mesh, Supervisor, Tree, Custom) with 50+ skill toolkits, real-time SSE streaming, human-in-the-loop and knowledge-graph memory.",
+      "tech": [
+        "LangGraph",
+        "FastAPI",
+        "React",
+        "Multi-LLM",
+        "Docker"
+      ],
+      "price": "Free (Non-Commercial)",
+      "url": "https://ai-collective-eight.vercel.app/",
+      "badge": "AI Workforce"
+    },
+    {
+      "id": "aura-wardrobe",
+      "name": "Aura — AI Virtual Wardrobe",
+      "description": "Build a virtual wardrobe, try on outfits instantly and get AI-powered styling recommendations from a personal fashion assistant.",
+      "tech": [
+        "React 19",
+        "TanStack Start",
+        "Tailwind CSS",
+        "AI Try-On"
+      ],
+      "price": "Free Beta",
+      "url": "https://ai-virtual-wardrobe-phi.vercel.app/",
+      "badge": "Web App"
+    },
+    {
+      "id": "lexica",
+      "name": "Lexica",
+      "description": "An English vocabulary scheduler with spaced repetition to plan daily reviews and grow vocabulary steadily.",
+      "tech": [
+        "React",
+        "TypeScript",
+        "Spaced Repetition"
+      ],
+      "price": "Free",
+      "url": "https://vocab-bloom-04.vercel.app/",
+      "badge": "Learning"
+    },
+    {
       "id": "slidegen-api",
       "name": "SlideGen Core API",
       "description": "A developer-friendly REST API to convert documents (PDF, Docx, Text) into fully formatted PowerPoint presentations using Gemini and VLM models.",
@@ -1223,6 +1271,11 @@
       "title": "Android Malware Detection via Call Graphs & GNNs",
       "venue": "PTIT Academy Journal - Published (2024)",
       "description": "Exploited call graph semantics and fine-tuned word embeddings to identify malicious Android apps with a 98.8% F1-score."
+    },
+    {
+      "title": "Survey on Long-Context Inference for Large Language Models",
+      "venue": "In preparation (2026)",
+      "description": "Survey of efficient long-context inference: efficient attention, KV-cache compression, context pruning and token selection, agentic long-context workloads, and long-context benchmarks."
     }
   ],
   "competitions": [
@@ -1306,6 +1359,7 @@
       "crewAI",
       "ADK",
       "LangChain",
+      "LangGraph",
       "MCP (Model Context Protocol)"
     ],
     "DevOps & MLOps": [
