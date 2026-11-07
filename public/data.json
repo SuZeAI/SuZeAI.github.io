@@ -1188,6 +1188,21 @@
   ],
   "products": [
     {
+      "id": "suzeai-memory",
+      "name": "SuZeAI Memory",
+      "description": "Central personal memory operating system and fieldbook portal. Features 9 dedicated operational modules, real-time bi-directional synchronization with local markdown files and MongoDB Atlas, responsive design, and tactile Furrow styling.",
+      "tech": [
+        "React 19",
+        "Tailwind CSS v4",
+        "Node.js",
+        "Express",
+        "MongoDB Atlas"
+      ],
+      "price": "Private / Open Core",
+      "url": "https://github.com/SuZeAI/suzeai-memory",
+      "badge": "Personal OS"
+    },
+    {
       "id": "ai-collective",
       "name": "AI – Collective",
       "description": "Create and run AI-powered companies of any kind. Describe a company in chat and the platform proposes departments, staff and skills; staff collaborate in six topologies (Sequential, Ring, Mesh, Supervisor, Tree, Custom) with 50+ skill toolkits, real-time SSE streaming, human-in-the-loop and knowledge-graph memory.",
